@@ -794,188 +794,309 @@
  cursor: pointer;
  box-sizing: border-box;
  }
- footer {
- background: #1a1a1a;
- color: #b0b0b0;
- padding: 0;
- box-sizing: border-box;
- }
  
- .footer-main {
- background: #1a1a1a;
- padding: 60px 0 40px;
- border-bottom: 1px solid #333;
- }
  
- .footer-grid {
- display: grid;
- grid-template-columns: 2fr 1fr 1fr 1.5fr;
- gap: 50px;
- max-width: 1200px;
- margin: 0 auto;
- padding: 0 20px;
- }
  
- .footer-column h3 {
- color: #fff;
- font-size: 18px;
- font-weight: 700;
- margin-bottom: 20px;
- font-family: 'Montserrat', sans-serif;
- }
  
- .footer-column p {
- margin: 8px 0;
- line-height: 1.8;
- font-size: 14px;
- }
  
- .footer-column ul {
- list-style: none;
- padding: 0;
- margin: 0;
- }
  
- .footer-column ul li {
- margin: 12px 0;
- }
  
- .footer-column ul li a {
- color: #b0b0b0;
- text-decoration: none;
- font-size: 14px;
- transition: color .3s;
- display: inline-block;
- }
  
- .footer-column ul li a:hover {
- color: var(--red);
- padding-left: 5px;
- }
  
- .footer-brand {
- display: flex;
- flex-direction: column;
- }
  
- .footer-brand h2 {
- color: #fff;
- font-size: 22px;
- font-weight: 700;
- margin-bottom: 15px;
- font-family: 'Montserrat', sans-serif;
- }
  
- .footer-hours {
- background: rgba(0, 48, 135, 0.1);
- padding: 15px;
- border-radius: 8px;
- margin-top: 20px;
- border-left: 4px solid var(--blue);
- }
  
- .footer-hours p {
- margin: 5px 0;
- font-size: 14px;
- }
  
- .footer-hours strong {
- color: #fff;
- }
  
- .footer-bottom {
- background: #0d0d0d;
- padding: 25px 0;
- }
  
- .footer-bottom-content {
- max-width: 1200px;
- margin: 0 auto;
- padding: 0 20px;
- }
  
- .footer-bottom p {
- margin: 8px 0;
- font-size: 13px;
- color: #888;
- text-align: center;
- }
  
- .footer-bottom-links {
- display: flex;
- justify-content: space-between;
- align-items: center;
- margin: 0 0 20px 0;
- flex-wrap: wrap;
- gap: 15px;
- padding: 20px 0;
- border-bottom: 1px solid #222;
- }
  
- .footer-bottom-links a {
- color: #b0b0b0;
- text-decoration: none;
- font-size: 14px;
- transition: color .3s;
- white-space: nowrap;
- }
  
- .footer-bottom-links a:hover {
- color: var(--blue);
- }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  @media (max-width: 992px) {
- .footer-grid {
- grid-template-columns: 1fr 1fr;
- gap: 40px;
- }
  
- .footer-bottom-links {
- justify-content: center;
- gap: 20px 30px;
- }
+ 
+ 
  }
  
  @media (max-width: 768px) {
- .footer-grid {
- grid-template-columns: 1fr;
- gap: 35px;
- }
  
- .footer-main {
- padding: 40px 0 30px;
- }
  
- .footer-column {
- text-align: center;
- }
  
- .footer-brand {
- align-items: center;
- }
  
- .footer-bottom-links {
- gap: 15px 25px;
- }
+ 
+ 
+ 
+ 
+ 
  }
  
  @media (max-width: 480px) {
- .footer-bottom-links {
- flex-direction: column;
- gap: 12px;
- padding: 15px 0;
- }
  
- .footer-bottom-links a {
- font-size: 13px;
- }
+ 
+ 
  }
  
  @keyframes fadeIn {
  from { opacity: 0; transform: translateY(20px); }
  to { opacity: 1; transform: translateY(0); }
  }
- </style>
+ 
+/* MEGA FOOTER STYLES - HomeAdvisor Style */
+.mega-footer {
+    background: #1a1a2e;
+    color: #a0a0a0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.mega-footer-top {
+    background: #16213e;
+    padding: 50px 20px;
+    border-bottom: 1px solid #2a2a4a;
+}
+
+.mega-footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.mega-footer h2 {
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.mega-footer-tagline {
+    color: #a0a0a0;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.mega-footer-sections {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.mega-footer-section h3 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #003087;
+    padding-bottom: 10px;
+}
+
+.mega-footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mega-footer-links a {
+    color: #a0a0a0;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.2s;
+    padding: 4px 0;
+}
+
+.mega-footer-links a:hover {
+    color: #fff;
+    padding-left: 5px;
+}
+
+.mega-footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.mega-footer-grid a {
+    color: #a0a0a0;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 6px 10px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.mega-footer-grid a:hover {
+    background: #003087;
+    color: #fff;
+}
+
+.mega-footer-middle {
+    background: #1a1a2e;
+    padding: 40px 20px;
+    border-bottom: 1px solid #2a2a4a;
+}
+
+.mega-footer-areas-header {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.mega-footer-areas {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.mega-footer-areas a {
+    color: #a0a0a0;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 10px 15px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 6px;
+    text-align: center;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+
+.mega-footer-areas a:hover {
+    background: #003087;
+    color: #fff;
+    border-color: #003087;
+}
+
+.mega-footer-brands {
+    background: #12121f;
+    padding: 40px 20px;
+    border-bottom: 1px solid #2a2a4a;
+}
+
+.mega-footer-brands-header {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.mega-footer-brands-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.mega-footer-brands-grid a {
+    color: #a0a0a0;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 12px 10px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 6px;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.mega-footer-brands-grid a:hover {
+    background: #003087;
+    color: #fff;
+}
+
+.mega-footer-bottom {
+    background: #0d0d1a;
+    padding: 30px 20px;
+}
+
+.mega-footer-bottom-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mega-footer-bottom-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.mega-footer-bottom-links a {
+    color: #a0a0a0;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.mega-footer-bottom-links a:hover {
+    color: #fff;
+}
+
+.mega-footer-copyright {
+    color: #666;
+    font-size: 13px;
+    margin: 10px 0;
+}
+
+.mega-footer-badges {
+    color: #888;
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+@media (max-width: 1200px) {
+    .mega-footer-sections { grid-template-columns: repeat(2, 1fr); }
+    .mega-footer-areas { grid-template-columns: repeat(4, 1fr); }
+    .mega-footer-brands-grid { grid-template-columns: repeat(6, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .mega-footer-sections { grid-template-columns: 1fr; gap: 30px; }
+    .mega-footer-areas { grid-template-columns: repeat(3, 1fr); }
+    .mega-footer-brands-grid { grid-template-columns: repeat(4, 1fr); }
+    .mega-footer h2 { font-size: 22px; }
+}
+
+@media (max-width: 480px) {
+    .mega-footer-areas { grid-template-columns: repeat(2, 1fr); }
+    .mega-footer-brands-grid { grid-template-columns: repeat(3, 1fr); }
+    .mega-footer-bottom-links { flex-direction: column; gap: 15px; }
+}
+
+</style>
 <style>
 .reviews-accordion{margin:40px auto;max-width:1000px;padding:0 20px;text-align:center}
 .reviews-accordion input[type="checkbox"]{display:none}
@@ -989,6 +1110,8 @@
 .reviews-header h2{color:#003087;font-size:24px;margin-bottom:10px}
 .reviews-stars{color:#ffc107;font-size:28px;letter-spacing:2px}
 .reviews-count{color:#666;font-size:14px;margin-top:8px}
+
+
 </style>
 </head>
 <body>
@@ -1112,70 +1235,152 @@
         </div>
     </section>
 
-<footer>
- <div class="footer-main">
- <div class="footer-grid">
- <div class="footer-column footer-brand">
- <h2>Appliance Repair</h2>
- <p><strong>Westchester County, New York</strong></p>
- <p>1 Martine Avenue<br>White Plains, NY 10601</p>
- <p style="margin-top: 15px;">Certified appliance repair serving all of Westchester County. Same-day service available for washers, dryers, dishwashers, ovens, microwaves, cooktops, and refrigerators.</p>
- <div class="footer-hours">
- <p><strong>Business Hours</strong></p>
- <p>Monday - Sunday<br>7:00 AM – 9:00 PM</p>
- </div>
- </div>
- 
- <div class="footer-column">
- <h3>Our Services</h3>
- <ul>
- <li><a href="https://westchestercountyrepair.com/appliances/washer-repair/">Washer Repair</a></li>
- <li><a href="https://westchestercountyrepair.com/appliances/dryer-repair/">Dryer Repair</a></li>
- <li><a href="https://westchestercountyrepair.com/appliances/refrigerator-repair/">Refrigerator Repair</a></li>
- <li><a href="https://westchestercountyrepair.com/appliances/dishwasher-repair/">Dishwasher Repair</a></li>
- <li><a href="https://westchestercountyrepair.com/appliances/oven-repair/">Oven Repair</a></li>
- <li><a href="https://westchestercountyrepair.com/appliances/microwave-repair/">Microwave Repair</a></li>
- </ul>
- </div>
- 
- <div class="footer-column">
- <h3>More Services</h3>
- <ul>
- <li><a href="https://westchestercountyrepair.com/appliances/cooktop-repair/">Cooktop Repair</a></li>
- <li><a href="https://westchestercountyrepair.com/appliances/wine-cooler-repair/">Wine Cooler Repair</a></li>
- <li><a href="https://westchestercountyrepair.com/appliances/vent-hood-repair/">Vent Hood Repair</a></li>
- <li><a href="https://westchestercountyrepair.com/appliances/installation-maintenance/">Installation & Maintenance</a></li>
- <li><a href="https://westchestercountyrepair.com/">All Appliances</a></li>
- </ul>
- </div>
- 
- <div class="footer-column">
- <h3>Quick Links</h3>
- <ul>
- <li><a href="https://westchestercountyrepair.com/">Home</a></li>
- <li><a href="https://westchestercountyrepair.com/ny/">Service Areas</a></li>
- <li><a href="#contact">Schedule Service</a></li>
- <li><a href="https://westchestercountyrepair.com/privacy-policy">Privacy Policy</a></li>
- <li><a href="https://westchestercountyrepair.com/terms-of-service">Terms of Service</a></li>
- </ul>
- </div>
- </div>
- </div>
- 
- <div class="footer-bottom">
- <div class="footer-bottom-content">
- <div class="footer-bottom-links">
- <a href="https://westchestercountyrepair.com/">Home</a>
- <a href="https://westchestercountyrepair.com/ny/">Service Areas</a>
- <a href="#contact">Schedule Service</a>
- <a href="https://westchestercountyrepair.com/privacy-policy">Privacy Policy</a>
- <a href="https://westchestercountyrepair.com/terms-of-service">Terms of Service</a>
- </div>
- <p>© 2025 Westchester County Appliance Repair. All Rights Reserved.</p>
- <p>Licensed & Insured • Factory Certified Technicians • Same-Day Service Available</p>
- </div>
- </div>
- </footer>
+
+
+<footer class="mega-footer">
+    <div class="mega-footer-top">
+        <div class="mega-footer-content">
+            <h2>Appliance Repair Westchester County</h2>
+            <p class="mega-footer-tagline">Professional appliance repair services throughout Westchester County, NY • Same-day service available</p>
+            
+            <div class="mega-footer-sections">
+                <div class="mega-footer-section">
+                    <h3>Our Services</h3>
+                    <div class="mega-footer-links">
+                        <a href="/appliances/refrigerator-repair/">Refrigerator Repair</a>
+                        <a href="/appliances/washer-repair/">Washer Repair</a>
+                        <a href="/appliances/dryer-repair/">Dryer Repair</a>
+                        <a href="/appliances/dishwasher-repair/">Dishwasher Repair</a>
+                        <a href="/appliances/oven-repair/">Oven & Range Repair</a>
+                        <a href="/appliances/cooktop-repair/">Cooktop Repair</a>
+                        <a href="/appliances/microwave-repair/">Microwave Repair</a>
+                        <a href="/appliances/vent-hood-repair/">Vent Hood Repair</a>
+                        <a href="/appliances/wine-cooler-repair/">Wine Cooler Repair</a>
+                        <a href="/appliances/installation-maintenance/">Installation & Maintenance</a>
+                    </div>
+                </div>
+                
+                <div class="mega-footer-section">
+                    <h3>Popular Brands</h3>
+                    <div class="mega-footer-links">
+                        <a href="/brands/samsung/">Samsung Repair</a>
+                        <a href="/brands/lg/">LG Repair</a>
+                        <a href="/brands/whirlpool/">Whirlpool Repair</a>
+                        <a href="/brands/ge/">GE Repair</a>
+                        <a href="/brands/frigidaire/">Frigidaire Repair</a>
+                        <a href="/brands/maytag/">Maytag Repair</a>
+                        <a href="/brands/kitchenaid/">KitchenAid Repair</a>
+                        <a href="/brands/bosch/">Bosch Repair</a>
+                        <a href="/brands/sub-zero/">Sub-Zero Repair</a>
+                        <a href="/brands/thermador/">Thermador Repair</a>
+                    </div>
+                </div>
+                
+                <div class="mega-footer-section">
+                    <h3>Company</h3>
+                    <div class="mega-footer-links">
+                        <a href="/">Home</a>
+                        <a href="/ny/">Service Areas</a>
+                        <a href="/troubleshooting/appliance-troubleshooting/">Troubleshooting Guide</a>
+                        <a href="/repairs/refrigerator-compressor-replacement/">Compressor Repair</a>
+                        <a href="/privacy-policy.html">Privacy Policy</a>
+                        <a href="/terms-of-service.html">Terms of Service</a>
+                    </div>
+                </div>
+                
+                <div class="mega-footer-section">
+                    <h3>Contact Us</h3>
+                    <div class="mega-footer-links">
+                        <p style="color: #fff; font-size: 14px; margin-bottom: 10px;"><strong>Westchester County, NY</strong></p>
+                        <p style="font-size: 14px; line-height: 1.6;">Serving all towns in Westchester County with same-day appliance repair.</p>
+                        <p style="margin-top: 15px; color: #fff;"><strong>Hours:</strong></p>
+                        <p style="font-size: 14px;">Mon - Sun: 7AM - 9PM</p>
+                        <p style="margin-top: 15px; font-size: 14px;">Licensed & Insured</p>
+                        <p style="font-size: 14px;">Factory Certified Technicians</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mega-footer-middle">
+        <div class="mega-footer-content">
+            <h3 class="mega-footer-areas-header">Service Areas in Westchester County</h3>
+            <div class="mega-footer-areas">
+                <a href="/ny/ardsley/">Ardsley</a>
+<a href="/ny/bronxville/">Bronxville</a>
+<a href="/ny/dobbs-ferry/">Dobbs Ferry</a>
+<a href="/ny/eastchester/">Eastchester</a>
+<a href="/ny/elmsford/">Elmsford</a>
+<a href="/ny/fairview/">Fairview</a>
+<a href="/ny/harrison/">Harrison</a>
+<a href="/ny/hartsdale/">Hartsdale</a>
+<a href="/ny/hastings-on-hudson/">Hastings-on-Hudson</a>
+<a href="/ny/irvington/">Irvington</a>
+<a href="/ny/larchmont/">Larchmont</a>
+<a href="/ny/mamaroneck/">Mamaroneck</a>
+<a href="/ny/mount-vernon/">Mount Vernon</a>
+<a href="/ny/new-rochelle/">New Rochelle</a>
+<a href="/ny/pelham-manor/">Pelham Manor</a>
+<a href="/ny/rye/">Rye</a>
+<a href="/ny/scarsdale/">Scarsdale</a>
+<a href="/ny/tarrytown/">Tarrytown</a>
+<a href="/ny/valhalla/">Valhalla</a>
+<a href="/ny/village-of-pelham/">Village of Pelham</a>
+<a href="/ny/white-plains/">White Plains</a>
+<a href="/ny/yonkers/">Yonkers</a>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="mega-footer-brands">
+        <div class="mega-footer-content">
+            <h3 class="mega-footer-brands-header">All Brands We Service</h3>
+            <div class="mega-footer-brands-grid">
+                <a href="/brands/samsung/">Samsung</a>
+<a href="/brands/lg/">LG</a>
+<a href="/brands/whirlpool/">Whirlpool</a>
+<a href="/brands/ge/">GE</a>
+<a href="/brands/frigidaire/">Frigidaire</a>
+<a href="/brands/maytag/">Maytag</a>
+<a href="/brands/kitchenaid/">KitchenAid</a>
+<a href="/brands/bosch/">Bosch</a>
+<a href="/brands/sub-zero/">Sub-Zero</a>
+<a href="/brands/viking/">Viking</a>
+<a href="/brands/thermador/">Thermador</a>
+<a href="/brands/miele/">Miele</a>
+<a href="/brands/electrolux/">Electrolux</a>
+<a href="/brands/jenn-air/">Jenn-Air</a>
+<a href="/brands/wolf/">Wolf</a>
+<a href="/brands/dacor/">Dacor</a>
+<a href="/brands/kenmore/">Kenmore</a>
+<a href="/brands/amana/">Amana</a>
+<a href="/brands/hotpoint/">Hotpoint</a>
+<a href="/brands/gaggenau/">Gaggenau</a>
+<a href="/brands/fisher-paykel/">Fisher & Paykel</a>
+<a href="/brands/asko/">Asko</a>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="mega-footer-bottom">
+        <div class="mega-footer-bottom-content">
+            <div class="mega-footer-bottom-links">
+                <a href="/">Home</a>
+                <a href="/ny/">Service Areas</a>
+                <a href="/troubleshooting/appliance-troubleshooting/">Troubleshooting</a>
+                <a href="/privacy-policy.html">Privacy Policy</a>
+                <a href="/terms-of-service.html">Terms of Service</a>
+            </div>
+            <p class="mega-footer-copyright">© 2025 Appliance Repair Westchester County. All Rights Reserved.</p>
+            <p class="mega-footer-badges">Licensed & Insured • Factory Certified Technicians • Same-Day Service • 57+ Brands Serviced • 22 Towns Covered</p>
+        </div>
+    </div>
+</footer>
+
+
  <script>
  // Towns list with URLs
  const westchesterTowns = [
