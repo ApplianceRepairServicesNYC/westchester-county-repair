@@ -794,511 +794,188 @@
  cursor: pointer;
  box-sizing: border-box;
  }
+ footer {
+ background: #1a1a1a;
+ color: #b0b0b0;
+ padding: 0;
+ box-sizing: border-box;
+ }
  
+ .footer-main {
+ background: #1a1a1a;
+ padding: 60px 0 40px;
+ border-bottom: 1px solid #333;
+ }
  
+ .footer-grid {
+ display: grid;
+ grid-template-columns: 2fr 1fr 1fr 1.5fr;
+ gap: 50px;
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 20px;
+ }
  
+ .footer-column h3 {
+ color: #fff;
+ font-size: 18px;
+ font-weight: 700;
+ margin-bottom: 20px;
+ font-family: 'Montserrat', sans-serif;
+ }
  
+ .footer-column p {
+ margin: 8px 0;
+ line-height: 1.8;
+ font-size: 14px;
+ }
  
+ .footer-column ul {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ }
  
+ .footer-column ul li {
+ margin: 12px 0;
+ }
  
+ .footer-column ul li a {
+ color: #b0b0b0;
+ text-decoration: none;
+ font-size: 14px;
+ transition: color .3s;
+ display: inline-block;
+ }
  
+ .footer-column ul li a:hover {
+ color: var(--red);
+ padding-left: 5px;
+ }
  
+ .footer-brand {
+ display: flex;
+ flex-direction: column;
+ }
  
+ .footer-brand h2 {
+ color: #fff;
+ font-size: 22px;
+ font-weight: 700;
+ margin-bottom: 15px;
+ font-family: 'Montserrat', sans-serif;
+ }
  
+ .footer-hours {
+ background: rgba(0, 48, 135, 0.1);
+ padding: 15px;
+ border-radius: 8px;
+ margin-top: 20px;
+ border-left: 4px solid var(--blue);
+ }
  
+ .footer-hours p {
+ margin: 5px 0;
+ font-size: 14px;
+ }
  
+ .footer-hours strong {
+ color: #fff;
+ }
  
+ .footer-bottom {
+ background: #0d0d0d;
+ padding: 25px 0;
+ }
  
+ .footer-bottom-content {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 20px;
+ }
  
+ .footer-bottom p {
+ margin: 8px 0;
+ font-size: 13px;
+ color: #888;
+ text-align: center;
+ }
  
+ .footer-bottom-links {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin: 0 0 20px 0;
+ flex-wrap: wrap;
+ gap: 15px;
+ padding: 20px 0;
+ border-bottom: 1px solid #222;
+ }
  
+ .footer-bottom-links a {
+ color: #b0b0b0;
+ text-decoration: none;
+ font-size: 14px;
+ transition: color .3s;
+ white-space: nowrap;
+ }
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+ .footer-bottom-links a:hover {
+ color: var(--blue);
+ }
  
  @media (max-width: 992px) {
+ .footer-grid {
+ grid-template-columns: 1fr 1fr;
+ gap: 40px;
+ }
  
- 
- 
+ .footer-bottom-links {
+ justify-content: center;
+ gap: 20px 30px;
+ }
  }
  
  @media (max-width: 768px) {
+ .footer-grid {
+ grid-template-columns: 1fr;
+ gap: 35px;
+ }
  
+ .footer-main {
+ padding: 40px 0 30px;
+ }
  
+ .footer-column {
+ text-align: center;
+ }
  
+ .footer-brand {
+ align-items: center;
+ }
  
- 
- 
- 
- 
- 
+ .footer-bottom-links {
+ gap: 15px 25px;
+ }
  }
  
  @media (max-width: 480px) {
+ .footer-bottom-links {
+ flex-direction: column;
+ gap: 12px;
+ padding: 15px 0;
+ }
  
- 
- 
+ .footer-bottom-links a {
+ font-size: 13px;
+ }
  }
  
  @keyframes fadeIn {
  from { opacity: 0; transform: translateY(20px); }
  to { opacity: 1; transform: translateY(0); }
  }
- 
-
-/* Top Section - Company Info */
-.mega-footer-top {
-    background: linear-gradient(135deg, #003087 0%, #001a4d 100%);
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.mega-footer-top h2 {
-    color: #fff;
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.mega-footer-top p {
-    color: rgba(255,255,255,0.85);
-    font-size: 18px;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-/* Services Section */
-.mega-footer-services {
-    background: #1a2332;
-    padding: 50px 20px;
-}
-
-.mega-footer-services-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.mega-footer-services-grid a {
-    display: block;
-    padding: 20px 15px;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 8px;
-    color: #fff;
-    text-decoration: none;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 500;
-    transition: all 0.3s;
-}
-
-.mega-footer-services-grid a:hover {
-    background: #003087;
-    border-color: #003087;
-    transform: translateY(-2px);
-}
-
-/* Service Areas Section */
-.mega-footer-areas {
-    background: #141d26;
-    padding: 50px 20px;
-}
-
-.mega-footer-areas-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 12px;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.mega-footer-areas-grid a {
-    display: block;
-    padding: 15px 10px;
-    background: rgba(255,255,255,0.04);
-    border-radius: 6px;
-    color: #8899a6;
-    text-decoration: none;
-    text-align: center;
-    font-size: 13px;
-    transition: all 0.2s;
-}
-
-.mega-footer-areas-grid a:hover {
-    background: #003087;
-    color: #fff;
-}
-
-/* Brands Section */
-.mega-footer-brands {
-    background: #0f1419;
-    padding: 50px 20px;
-}
-
-.mega-footer-brands-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 10px;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.mega-footer-brands-grid a {
-    display: block;
-    padding: 12px 8px;
-    background: rgba(255,255,255,0.03);
-    border-radius: 4px;
-    color: #8899a6;
-    text-decoration: none;
-    text-align: center;
-    font-size: 12px;
-    transition: all 0.2s;
-}
-
-.mega-footer-brands-grid a:hover {
-    background: #003087;
-    color: #fff;
-}
-
-/* Info Columns Section */
-.mega-footer-info {
-    background: #1a2332;
-    padding: 50px 20px;
-    border-top: 1px solid rgba(255,255,255,0.05);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-
-.mega-footer-info-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 50px;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.mega-footer-info-col h3 {
-    color: #fff;
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.mega-footer-info-col p {
-    color: #8899a6;
-    font-size: 14px;
-    line-height: 1.7;
-    margin-bottom: 15px;
-}
-
-.mega-footer-info-col ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.mega-footer-info-col ul li {
-    margin-bottom: 12px;
-}
-
-.mega-footer-info-col ul li a {
-    color: #8899a6;
-    text-decoration: none;
-    font-size: 14px;
-    transition: all 0.2s;
-}
-
-.mega-footer-info-col ul li a:hover {
-    color: #fff;
-    padding-left: 5px;
-}
-
-.mega-footer-hours {
-    background: rgba(0, 48, 135, 0.2);
-    padding: 20px;
-    border-radius: 8px;
-    border-left: 4px solid #003087;
-    margin-top: 20px;
-}
-
-.mega-footer-hours p {
-    margin: 5px 0;
-    font-size: 14px;
-}
-
-.mega-footer-hours strong {
-    color: #fff;
-}
-
-/* Bottom Bar */
-.mega-footer-bottom {
-    background: #0a0e12;
-    padding: 30px 20px;
-}
-
-.mega-footer-bottom-content {
-    max-width: 1400px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.mega-footer-bottom-links {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-bottom: 25px;
-    flex-wrap: wrap;
-}
-
-.mega-footer-bottom-links a {
-    color: #8899a6;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.2s;
-}
-
-.mega-footer-bottom-links a:hover {
-    color: #fff;
-}
-
-.mega-footer-copyright {
-    color: #536471;
-    font-size: 13px;
-    margin: 10px 0;
-}
-
-.mega-footer-badges {
-    color: #536471;
-    font-size: 12px;
-    margin-top: 15px;
-    letter-spacing: 0.5px;
-}
-
-/* Responsive */
-@media (max-width: 1200px) {
-    .mega-footer-services-grid { grid-template-columns: repeat(4, 1fr); }
-    .mega-footer-areas-grid { grid-template-columns: repeat(4, 1fr); }
-    .mega-footer-brands-grid { grid-template-columns: repeat(5, 1fr); }
-    .mega-footer-info-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
-}
-
-@media (max-width: 768px) {
-    .mega-footer-top h2 { font-size: 24px; }
-    .mega-footer-top p { font-size: 16px; }
-    .mega-footer-services-grid { grid-template-columns: repeat(2, 1fr); }
-    .mega-footer-areas-grid { grid-template-columns: repeat(3, 1fr); }
-    .mega-footer-brands-grid { grid-template-columns: repeat(4, 1fr); }
-    .mega-footer-info-grid { grid-template-columns: 1fr; gap: 30px; }
-    .mega-footer-bottom-links { gap: 20px; }
-}
-
-@media (max-width: 480px) {
-    .mega-footer-services-grid { grid-template-columns: 1fr 1fr; }
-    .mega-footer-areas-grid { grid-template-columns: repeat(2, 1fr); }
-    .mega-footer-brands-grid { grid-template-columns: repeat(3, 1fr); }
-    .mega-footer-bottom-links { flex-direction: column; gap: 15px; }
-}
-
-
-/* FOOTER STYLES */
-footer {
-    background: #1a1a1a;
-    color: #b0b0b0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.footer-main {
-    background: #1a1a1a;
-    padding: 60px 0 40px;
-    border-bottom: 1px solid #333;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.5fr;
-    gap: 50px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.footer-column h3 {
-    color: #fff;
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.footer-column p {
-    margin: 8px 0;
-    line-height: 1.8;
-    font-size: 14px;
-}
-
-.footer-column ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-column ul li {
-    margin: 12px 0;
-}
-
-.footer-column ul li a {
-    color: #b0b0b0;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color .3s;
-    display: inline-block;
-}
-
-.footer-column ul li a:hover {
-    color: #e41e26;
-    padding-left: 5px;
-}
-
-.footer-brand {
-    display: flex;
-    flex-direction: column;
-}
-
-.footer-brand h2 {
-    color: #fff;
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.footer-hours {
-    background: rgba(0, 48, 135, 0.1);
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 20px;
-    border-left: 4px solid #003087;
-}
-
-.footer-hours p {
-    margin: 5px 0;
-    font-size: 14px;
-}
-
-.footer-hours strong {
-    color: #fff;
-}
-
-.footer-bottom {
-    background: #0d0d0d;
-    padding: 25px 0;
-}
-
-.footer-bottom-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.footer-bottom p {
-    margin: 8px 0;
-    font-size: 13px;
-    color: #888;
-    text-align: center;
-}
-
-.footer-bottom-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 0 20px 0;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 20px 0;
-    border-bottom: 1px solid #222;
-}
-
-.footer-bottom-links a {
-    color: #b0b0b0;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color .3s;
-    white-space: nowrap;
-}
-
-.footer-bottom-links a:hover {
-    color: #003087;
-}
-
-@media (max-width: 992px) {
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-    }
-    
-    .footer-bottom-links {
-        justify-content: center;
-        gap: 20px 30px;
-    }
-}
-
-@media (max-width: 768px) {
-    .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-    
-    .footer-main {
-        padding: 40px 0 30px;
-    }
-    
-    .footer-column {
-        text-align: center;
-    }
-    
-    .footer-brand {
-        align-items: center;
-    }
-    
-    .footer-bottom-links {
-        gap: 15px 25px;
-    }
-}
-
-@media (max-width: 480px) {
-    .footer-bottom-links {
-        flex-direction: column;
-        gap: 12px;
-        padding: 15px 0;
-    }
-    
-    .footer-bottom-links a {
-        font-size: 13px;
-    }
-}
-
-</style>
+ </style>
 <style>
 .reviews-accordion{margin:40px auto;max-width:1000px;padding:0 20px;text-align:center}
 .reviews-accordion input[type="checkbox"]{display:none}
@@ -1312,8 +989,6 @@ footer {
 .reviews-header h2{color:#003087;font-size:24px;margin-bottom:10px}
 .reviews-stars{color:#ffc107;font-size:28px;letter-spacing:2px}
 .reviews-count{color:#666;font-size:14px;margin-top:8px}
-
-
 </style>
 </head>
 <body>
@@ -1437,11 +1112,70 @@ footer {
         </div>
     </section>
 
-
-
-
-
-
+<footer>
+ <div class="footer-main">
+ <div class="footer-grid">
+ <div class="footer-column footer-brand">
+ <h2>Appliance Repair</h2>
+ <p><strong>Westchester County, New York</strong></p>
+ <p>1 Martine Avenue<br>White Plains, NY 10601</p>
+ <p style="margin-top: 15px;">Certified appliance repair serving all of Westchester County. Same-day service available for washers, dryers, dishwashers, ovens, microwaves, cooktops, and refrigerators.</p>
+ <div class="footer-hours">
+ <p><strong>Business Hours</strong></p>
+ <p>Monday - Sunday<br>7:00 AM – 9:00 PM</p>
+ </div>
+ </div>
+ 
+ <div class="footer-column">
+ <h3>Our Services</h3>
+ <ul>
+ <li><a href="https://westchestercountyrepair.com/appliances/washer-repair/">Washer Repair</a></li>
+ <li><a href="https://westchestercountyrepair.com/appliances/dryer-repair/">Dryer Repair</a></li>
+ <li><a href="https://westchestercountyrepair.com/appliances/refrigerator-repair/">Refrigerator Repair</a></li>
+ <li><a href="https://westchestercountyrepair.com/appliances/dishwasher-repair/">Dishwasher Repair</a></li>
+ <li><a href="https://westchestercountyrepair.com/appliances/oven-repair/">Oven Repair</a></li>
+ <li><a href="https://westchestercountyrepair.com/appliances/microwave-repair/">Microwave Repair</a></li>
+ </ul>
+ </div>
+ 
+ <div class="footer-column">
+ <h3>More Services</h3>
+ <ul>
+ <li><a href="https://westchestercountyrepair.com/appliances/cooktop-repair/">Cooktop Repair</a></li>
+ <li><a href="https://westchestercountyrepair.com/appliances/wine-cooler-repair/">Wine Cooler Repair</a></li>
+ <li><a href="https://westchestercountyrepair.com/appliances/vent-hood-repair/">Vent Hood Repair</a></li>
+ <li><a href="https://westchestercountyrepair.com/appliances/installation-maintenance/">Installation & Maintenance</a></li>
+ <li><a href="https://westchestercountyrepair.com/">All Appliances</a></li>
+ </ul>
+ </div>
+ 
+ <div class="footer-column">
+ <h3>Quick Links</h3>
+ <ul>
+ <li><a href="https://westchestercountyrepair.com/">Home</a></li>
+ <li><a href="https://westchestercountyrepair.com/ny/">Service Areas</a></li>
+ <li><a href="#contact">Schedule Service</a></li>
+ <li><a href="https://westchestercountyrepair.com/privacy-policy">Privacy Policy</a></li>
+ <li><a href="https://westchestercountyrepair.com/terms-of-service">Terms of Service</a></li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ 
+ <div class="footer-bottom">
+ <div class="footer-bottom-content">
+ <div class="footer-bottom-links">
+ <a href="https://westchestercountyrepair.com/">Home</a>
+ <a href="https://westchestercountyrepair.com/ny/">Service Areas</a>
+ <a href="#contact">Schedule Service</a>
+ <a href="https://westchestercountyrepair.com/privacy-policy">Privacy Policy</a>
+ <a href="https://westchestercountyrepair.com/terms-of-service">Terms of Service</a>
+ </div>
+ <p>© 2025 Westchester County Appliance Repair. All Rights Reserved.</p>
+ <p>Licensed & Insured • Factory Certified Technicians • Same-Day Service Available</p>
+ </div>
+ </div>
+ </footer>
  <script>
  // Towns list with URLs
  const westchesterTowns = [
@@ -1747,69 +1481,5 @@ footer {
  }
  });
  </script>
-
-<footer>
-    <div class="footer-main">
-        <div class="footer-grid">
-            <div class="footer-column footer-brand">
-                <h2>Appliance Repair</h2>
-                <p><strong>Westchester County, New York</strong></p>
-                <p>Serving All of Westchester County, NY</p>
-                <p style="margin-top: 15px;">Professional appliance repair serving all of Westchester County. Same-day service available for washers, dryers, dishwashers, ovens, microwaves, cooktops, and refrigerators.</p>
-                <div class="footer-hours">
-                    <p><strong>Business Hours</strong></p>
-                    <p>Monday - Sunday<br>7:00 AM – 9:00 PM</p>
-                </div>
-            </div>
-            
-            <div class="footer-column">
-                <h3>Our Services</h3>
-                <ul>
-                    <li><a href="/appliances/washer-repair/">Washer Repair</a></li>
-                    <li><a href="/appliances/dryer-repair/">Dryer Repair</a></li>
-                    <li><a href="/appliances/refrigerator-repair/">Refrigerator Repair</a></li>
-                    <li><a href="/appliances/dishwasher-repair/">Dishwasher Repair</a></li>
-                    <li><a href="/appliances/oven-repair/">Oven Repair</a></li>
-                    <li><a href="/appliances/microwave-repair/">Microwave Repair</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-column">
-                <h3>More Services</h3>
-                <ul>
-                    <li><a href="/appliances/cooktop-repair/">Cooktop Repair</a></li>
-                    <li><a href="/appliances/wine-cooler-repair/">Wine Cooler Repair</a></li>
-                    <li><a href="/appliances/vent-hood-repair/">Vent Hood Repair</a></li>
-                    <li><a href="/">Installation & Maintenance</a></li>
-                    <li><a href="/">All Appliances</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/troubleshooting/appliance-troubleshooting/">FAQ</a></li>
-                    <li><a href="/ny/">Service Areas</a></li>
-                    <li><a href="#contact">Schedule Service</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    <div class="footer-bottom">
-        <div class="footer-bottom-content">
-            <div class="footer-bottom-links">
-                <a href="/">Home</a>
-                <a href="/troubleshooting/appliance-troubleshooting/">FAQ</a>
-                <a href="/ny/">Service Areas</a>
-                <a href="#contact">Schedule Service</a>
-            </div>
-            <p>© 2025 Westchester County Appliance Repair. All Rights Reserved.</p>
-            <p>Licensed & Insured • Factory Certified Technicians • Same-Day Service Available</p>
-        </div>
-    </div>
-</footer>
-
 </body>
 </html>
