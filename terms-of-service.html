@@ -660,121 +660,137 @@
  
 
 
-<!-- SERVICE AREAS BLOCK - Internal Linking -->
-<section class="internal-links-section service-areas-links" style="padding: 40px 20px; background: #f8f9fa;">
-<div style="max-width: 1200px; margin: 0 auto;">
-<h2 style="text-align: center; color: #003087; margin-bottom: 30px;">Appliance Repair Service Areas in Westchester County</h2>
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-<a href="/ny/ardsley/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #ddd; border-radius: 4px; text-decoration: none; color: #003087;">Ardsley Appliance Repair</a>
-<a href="/ny/bronxville/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #ddd; border-radius: 4px; text-decoration: none; color: #003087;">Bronxville Appliance Repair</a>
-<a href="/ny/dobbs-ferry/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #ddd; border-radius: 4px; text-decoration: none; color: #003087;">Dobbs Ferry Appliance Repair</a>
-<a href="/ny/eastchester/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #ddd; border-radius: 4px; text-decoration: none; color: #003087;">Eastchester Appliance Repair</a>
-<a href="/ny/elmsford/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #ddd; border-radius: 4px; text-decoration: none; color: #003087;">Elmsford Appliance Repair</a>
-<a href="/ny/fairview/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #ddd; border-radius: 4px; text-decoration: none; color: #003087;">Fairview Appliance Repair</a>
-<a href="/ny/harrison/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #ddd; border-radius: 4px; text-decoration: none; color: #003087;">Harrison Appliance Repair</a>
-<a href="/ny/hartsdale/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #ddd; border-radius: 4px; text-decoration: none; color: #003087;">Hartsdale Appliance Repair</a>
-<a href="/ny/hastings-on-hudson/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #ddd; border-radius: 4px; text-decoration: none; color: #003087;">Hastings on-Hudson Appliance Repair</a>
-<a href="/ny/irvington/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #ddd; border-radius: 4px; text-decoration: none; color: #003087;">Irvington Appliance Repair</a>
-<a href="/ny/larchmont/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #ddd; border-radius: 4px; text-decoration: none; color: #003087;">Larchmont Appliance Repair</a>
-<a href="/ny/mamaroneck/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #ddd; border-radius: 4px; text-decoration: none; color: #003087;">Mamaroneck Appliance Repair</a>
-<a href="/ny/mount-vernon/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #ddd; border-radius: 4px; text-decoration: none; color: #003087;">Mount Vernon Appliance Repair</a>
-<a href="/ny/new-rochelle/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #ddd; border-radius: 4px; text-decoration: none; color: #003087;">New Rochelle Appliance Repair</a>
-<a href="/ny/pelham-manor/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #ddd; border-radius: 4px; text-decoration: none; color: #003087;">Pelham Manor Appliance Repair</a>
-<a href="/ny/rye/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #ddd; border-radius: 4px; text-decoration: none; color: #003087;">Rye Appliance Repair</a>
-<a href="/ny/scarsdale/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #ddd; border-radius: 4px; text-decoration: none; color: #003087;">Scarsdale Appliance Repair</a>
-<a href="/ny/tarrytown/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #ddd; border-radius: 4px; text-decoration: none; color: #003087;">Tarrytown Appliance Repair</a>
-<a href="/ny/valhalla/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #ddd; border-radius: 4px; text-decoration: none; color: #003087;">Valhalla Appliance Repair</a>
-<a href="/ny/village-of-pelham/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #ddd; border-radius: 4px; text-decoration: none; color: #003087;">Village of Pelham Appliance Repair</a>
-<a href="/ny/white-plains/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #ddd; border-radius: 4px; text-decoration: none; color: #003087;">White Plains Appliance Repair</a>
-<a href="/ny/yonkers/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #ddd; border-radius: 4px; text-decoration: none; color: #003087;">Yonkers Appliance Repair</a>
-</div>
+
+<style>
+.internal-links-wrapper { padding: 20px 0; }
+.internal-block { padding: 30px 20px; max-width: 1200px; margin: 0 auto; }
+.internal-block h2 { text-align: center; color: #003087; margin-bottom: 15px; font-size: 1.5rem; }
+.internal-block p { text-align: center; color: #555; margin-bottom: 20px; max-width: 800px; margin-left: auto; margin-right: auto; }
+.internal-block p a { color: #003087; text-decoration: underline; }
+.link-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.link-grid a { display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #ddd; border-radius: 4px; text-decoration: none; color: #003087; font-size: 14px; transition: all 0.2s; }
+.link-grid a:hover { background: #003087; color: #fff; border-color: #003087; }
+.service-areas-block { background: #f8f9fa; }
+.brands-block { background: #fff; }
+.appliances-block { background: #f0f4f8; }
+.nearby-block { background: #e8f4f8; }
+</style>
+
+<div class="internal-links-wrapper">
+
+<!-- SERVICE AREAS BLOCK -->
+<section class="internal-block service-areas-block">
+<h2>Appliance Repair Service Areas in Westchester County</h2>
+<p>We provide professional appliance repair services throughout Westchester County, NY. From refrigerators to dishwashers, our certified technicians serve all major towns and villages. Need help diagnosing an issue? Check our <a href="/troubleshooting/appliance-troubleshooting/">Appliance Troubleshooting Guide</a> for quick solutions.</p>
+<div class="link-grid">
+<a href="/ny/ardsley/">Ardsley Appliance Repair</a>
+<a href="/ny/bronxville/">Bronxville Appliance Repair</a>
+<a href="/ny/dobbs-ferry/">Dobbs Ferry Appliance Repair</a>
+<a href="/ny/eastchester/">Eastchester Appliance Repair</a>
+<a href="/ny/elmsford/">Elmsford Appliance Repair</a>
+<a href="/ny/fairview/">Fairview Appliance Repair</a>
+<a href="/ny/harrison/">Harrison Appliance Repair</a>
+<a href="/ny/hartsdale/">Hartsdale Appliance Repair</a>
+<a href="/ny/hastings-on-hudson/">Hastings on-Hudson Appliance Repair</a>
+<a href="/ny/irvington/">Irvington Appliance Repair</a>
+<a href="/ny/larchmont/">Larchmont Appliance Repair</a>
+<a href="/ny/mamaroneck/">Mamaroneck Appliance Repair</a>
+<a href="/ny/mount-vernon/">Mount Vernon Appliance Repair</a>
+<a href="/ny/new-rochelle/">New Rochelle Appliance Repair</a>
+<a href="/ny/pelham-manor/">Pelham Manor Appliance Repair</a>
+<a href="/ny/rye/">Rye Appliance Repair</a>
+<a href="/ny/scarsdale/">Scarsdale Appliance Repair</a>
+<a href="/ny/tarrytown/">Tarrytown Appliance Repair</a>
+<a href="/ny/valhalla/">Valhalla Appliance Repair</a>
+<a href="/ny/village-of-pelham/">Village of Pelham Appliance Repair</a>
+<a href="/ny/white-plains/">White Plains Appliance Repair</a>
+<a href="/ny/yonkers/">Yonkers Appliance Repair</a>
 </div>
 </section>
 
-<!-- BRANDS BLOCK - Internal Linking -->
-<section class="internal-links-section brands-links" style="padding: 40px 20px; background: #fff;">
-<div style="max-width: 1200px; margin: 0 auto;">
-<h2 style="text-align: center; color: #003087; margin-bottom: 30px;">Brands We Service</h2>
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;">
-<a href="/brands/admiral/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Admiral</a>
-<a href="/brands/aeg/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">AEG</a>
-<a href="/brands/amana/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Amana</a>
-<a href="/brands/ariston/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Ariston</a>
-<a href="/brands/asko/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Asko</a>
-<a href="/brands/avantgarde/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Avantgarde</a>
-<a href="/brands/beaumark/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Beaumark</a>
-<a href="/brands/bertazzoni/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Bertazzoni</a>
-<a href="/brands/bertazzoni-appliances/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Bertazzoni Appliances</a>
-<a href="/brands/blomberg/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Blomberg</a>
-<a href="/brands/bluestar/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">BlueStar</a>
-<a href="/brands/bosch/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Bosch</a>
-<a href="/brands/brada/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Brada</a>
-<a href="/brands/broan/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Broan</a>
-<a href="/brands/cafe/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Cafe</a>
-<a href="/brands/cove/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Cove</a>
-<a href="/brands/dacor/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Dacor</a>
-<a href="/brands/danby/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Danby</a>
-<a href="/brands/electrolux/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Electrolux</a>
-<a href="/brands/fisher-paykel/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Fisher & Paykel</a>
-<a href="/brands/frigidaire/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Frigidaire</a>
-<a href="/brands/fulgor-milano/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Fulgor Milano</a>
-<a href="/brands/gaggenau/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Gaggenau</a>
-<a href="/brands/ge/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">GE</a>
-<a href="/brands/haier/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Haier</a>
-<a href="/brands/hobart/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Hobart</a>
-<a href="/brands/hotpoint/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Hotpoint</a>
-<a href="/brands/ikea/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">IKEA</a>
-<a href="/brands/inglis/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Inglis</a>
-<a href="/brands/jenn-air/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Jenn-Air</a>
-<a href="/brands/kenmore/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Kenmore</a>
-<a href="/brands/kitchenaid/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">KitchenAid</a>
-<a href="/brands/lg/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">LG</a>
-<a href="/brands/liebherr/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Liebherr</a>
-<a href="/brands/magic-chef/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Magic Chef</a>
-<a href="/brands/marvel/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Marvel</a>
-<a href="/brands/maytag/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Maytag</a>
-<a href="/brands/miele/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Miele</a>
-<a href="/brands/moffat/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Moffat</a>
-<a href="/brands/panasonic/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Panasonic</a>
-<a href="/brands/porter-charles/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Porter Charles</a>
-<a href="/brands/premier/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Premier</a>
-<a href="/brands/roper/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Roper</a>
-<a href="/brands/samsung/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Samsung</a>
-<a href="/brands/sharp/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Sharp</a>
-<a href="/brands/sirius/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Sirius</a>
-<a href="/brands/smeg/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Smeg</a>
-<a href="/brands/sub-zero/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Sub-Zero</a>
-<a href="/brands/tappan/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Tappan</a>
-<a href="/brands/thermador/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Thermador</a>
-<a href="/brands/thor-kitchen/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Thor Kitchen</a>
-<a href="/brands/venmar/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Venmar</a>
-<a href="/brands/vent-a-hood/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Vent-A-Hood</a>
-<a href="/brands/viking/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Viking</a>
-<a href="/brands/westinghouse/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Westinghouse</a>
-<a href="/brands/whirlpool/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Whirlpool</a>
-<a href="/brands/wolf/" style="display: inline-block; padding: 6px 12px; background: #f8f9fa; border: 1px solid #eee; border-radius: 4px; text-decoration: none; color: #333; font-size: 14px;">Wolf</a>
-</div>
+<!-- BRANDS BLOCK -->
+<section class="internal-block brands-block">
+<h2>Brands We Service</h2>
+<p>Our factory-trained technicians are authorized to repair all major appliance brands. Whether you own a premium European brand or a trusted American manufacturer, we have the expertise to fix it. Visit our <a href="/troubleshooting/appliance-troubleshooting/">troubleshooting guide</a> before scheduling if you want to try a quick fix.</p>
+<div class="link-grid">
+<a href="/brands/admiral/">Admiral Repair</a>
+<a href="/brands/aeg/">AEG Repair</a>
+<a href="/brands/amana/">Amana Repair</a>
+<a href="/brands/ariston/">Ariston Repair</a>
+<a href="/brands/asko/">Asko Repair</a>
+<a href="/brands/avantgarde/">Avantgarde Repair</a>
+<a href="/brands/beaumark/">Beaumark Repair</a>
+<a href="/brands/bertazzoni/">Bertazzoni Repair</a>
+<a href="/brands/bertazzoni-appliances/">Bertazzoni Appliances Repair</a>
+<a href="/brands/blomberg/">Blomberg Repair</a>
+<a href="/brands/bluestar/">BlueStar Repair</a>
+<a href="/brands/bosch/">Bosch Repair</a>
+<a href="/brands/brada/">Brada Repair</a>
+<a href="/brands/broan/">Broan Repair</a>
+<a href="/brands/cafe/">Cafe Repair</a>
+<a href="/brands/cove/">Cove Repair</a>
+<a href="/brands/dacor/">Dacor Repair</a>
+<a href="/brands/danby/">Danby Repair</a>
+<a href="/brands/electrolux/">Electrolux Repair</a>
+<a href="/brands/fisher-paykel/">Fisher & Paykel Repair</a>
+<a href="/brands/frigidaire/">Frigidaire Repair</a>
+<a href="/brands/fulgor-milano/">Fulgor Milano Repair</a>
+<a href="/brands/gaggenau/">Gaggenau Repair</a>
+<a href="/brands/ge/">GE Repair</a>
+<a href="/brands/haier/">Haier Repair</a>
+<a href="/brands/hobart/">Hobart Repair</a>
+<a href="/brands/hotpoint/">Hotpoint Repair</a>
+<a href="/brands/ikea/">IKEA Repair</a>
+<a href="/brands/inglis/">Inglis Repair</a>
+<a href="/brands/jenn-air/">Jenn-Air Repair</a>
+<a href="/brands/kenmore/">Kenmore Repair</a>
+<a href="/brands/kitchenaid/">KitchenAid Repair</a>
+<a href="/brands/lg/">LG Repair</a>
+<a href="/brands/liebherr/">Liebherr Repair</a>
+<a href="/brands/magic-chef/">Magic Chef Repair</a>
+<a href="/brands/marvel/">Marvel Repair</a>
+<a href="/brands/maytag/">Maytag Repair</a>
+<a href="/brands/miele/">Miele Repair</a>
+<a href="/brands/moffat/">Moffat Repair</a>
+<a href="/brands/panasonic/">Panasonic Repair</a>
+<a href="/brands/porter-charles/">Porter Charles Repair</a>
+<a href="/brands/premier/">Premier Repair</a>
+<a href="/brands/roper/">Roper Repair</a>
+<a href="/brands/samsung/">Samsung Repair</a>
+<a href="/brands/sharp/">Sharp Repair</a>
+<a href="/brands/sirius/">Sirius Repair</a>
+<a href="/brands/smeg/">Smeg Repair</a>
+<a href="/brands/sub-zero/">Sub-Zero Repair</a>
+<a href="/brands/tappan/">Tappan Repair</a>
+<a href="/brands/thermador/">Thermador Repair</a>
+<a href="/brands/thor-kitchen/">Thor Kitchen Repair</a>
+<a href="/brands/venmar/">Venmar Repair</a>
+<a href="/brands/vent-a-hood/">Vent-A-Hood Repair</a>
+<a href="/brands/viking/">Viking Repair</a>
+<a href="/brands/westinghouse/">Westinghouse Repair</a>
+<a href="/brands/whirlpool/">Whirlpool Repair</a>
+<a href="/brands/wolf/">Wolf Repair</a>
 </div>
 </section>
 
-<!-- APPLIANCES BLOCK - Internal Linking -->
-<section class="internal-links-section appliances-links" style="padding: 40px 20px; background: #f0f4f8;">
-<div style="max-width: 1200px; margin: 0 auto;">
-<h2 style="text-align: center; color: #003087; margin-bottom: 30px;">Appliance Services</h2>
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-<a href="/appliances/cooktop-repair/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #003087; border-radius: 4px; text-decoration: none; color: #003087;">Cooktop Repair</a>
-<a href="/appliances/dishwasher-repair/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #003087; border-radius: 4px; text-decoration: none; color: #003087;">Dishwasher Repair</a>
-<a href="/appliances/dryer-repair/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #003087; border-radius: 4px; text-decoration: none; color: #003087;">Dryer Repair</a>
-<a href="/appliances/installation-maintenance/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #003087; border-radius: 4px; text-decoration: none; color: #003087;">Installation Maintenance</a>
-<a href="/appliances/microwave-repair/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #003087; border-radius: 4px; text-decoration: none; color: #003087;">Microwave Repair</a>
-<a href="/appliances/oven-repair/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #003087; border-radius: 4px; text-decoration: none; color: #003087;">Oven Repair</a>
-<a href="/appliances/refrigerator-repair/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #003087; border-radius: 4px; text-decoration: none; color: #003087;">Refrigerator Repair</a>
-<a href="/appliances/vent-hood-repair/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #003087; border-radius: 4px; text-decoration: none; color: #003087;">Vent Hood Repair</a>
-<a href="/appliances/washer-repair/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #003087; border-radius: 4px; text-decoration: none; color: #003087;">Washer Repair</a>
-<a href="/appliances/wine-cooler-repair/" style="display: inline-block; padding: 8px 16px; background: #fff; border: 1px solid #003087; border-radius: 4px; text-decoration: none; color: #003087;">Wine Cooler Repair</a>
-</div>
+<!-- APPLIANCES BLOCK -->
+<section class="internal-block appliances-block">
+<h2>Appliance Repair Services</h2>
+<p>We repair all types of household appliances including refrigerators, washers, dryers, dishwashers, ovens, and more. Same-day service is available for most repairs in Westchester County. For common issues, browse our <a href="/troubleshooting/appliance-troubleshooting/">appliance troubleshooting page</a> first.</p>
+<div class="link-grid">
+<a href="/appliances/cooktop-repair/">Cooktop Repair</a>
+<a href="/appliances/dishwasher-repair/">Dishwasher Repair</a>
+<a href="/appliances/dryer-repair/">Dryer Repair</a>
+<a href="/appliances/installation-maintenance/">Installation Maintenance</a>
+<a href="/appliances/microwave-repair/">Microwave Repair</a>
+<a href="/appliances/oven-repair/">Oven Repair</a>
+<a href="/appliances/refrigerator-repair/">Refrigerator Repair</a>
+<a href="/appliances/vent-hood-repair/">Vent Hood Repair</a>
+<a href="/appliances/washer-repair/">Washer Repair</a>
+<a href="/appliances/wine-cooler-repair/">Wine Cooler Repair</a>
 </div>
 </section>
+</div>
 
 <footer>
  <div class="footer-main">
