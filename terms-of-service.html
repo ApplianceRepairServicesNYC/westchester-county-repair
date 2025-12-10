@@ -3,8 +3,8 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Terms of Service | Westchester County Appliance Repair</title>
- <meta name="description" content="Terms of Service for Westchester County Appliance Repair. Understand the terms governing our appliance repair services.">
+ <title>Terms of Service</title>
+ <meta name="description" content="Terms of service for appliance repair.">
  <meta name="robots" content="index, follow">
  <link rel="canonical" href="https://westchestercountyrepair.com/terms-of-service">
  <link rel="icon" type="image/png" href="https://westchestercountyrepair.com/favicon.png?v=1" sizes="180x180">
@@ -724,7 +724,7 @@
  </footer>
  <script>
  // Towns list with URLs
- const bergenTowns = [
+ const westchesterTowns = [
  {name: "Ardsley", zip: "07401", url: "https://westchestercountyrepair.com/ny/ardsley/"},
  {name: "Bronxville", zip: "07620", url: "https://westchestercountyrepair.com/ny/bronxville/"},
  {name: "Tarrytown", zip: "07621", url: "https://westchestercountyrepair.com/ny/tarrytown/"},
@@ -748,12 +748,10 @@
  {name: "Eastchester", zip: "07026", url: "https://westchestercountyrepair.com/ny/eastchester/"},
  {name: "Ardsley", zip: "07452", url: "https://westchestercountyrepair.com/ny/ardsley/"},
  {name: "White Plains", zip: "07601", url: "https://westchestercountyrepair.com/ny/white-plains/"},
- {name: "Harrington Park", zip: "07640", url: "https://westchestercountyrepair.com/ny/ardsley/"},
  {name: "New Rochelle", zip: "07604", url: "https://westchestercountyrepair.com/ny/new-rochelle/"},
  {name: "Pelham Manor", zip: "07641", url: "https://westchestercountyrepair.com/ny/pelham-manor/"},
  {name: "Rye", zip: "07642", url: "https://westchestercountyrepair.com/ny/rye/"},
  {name: "Scarsdale", zip: "07423", url: "https://westchestercountyrepair.com/ny/scarsdale/"},
- {name: "Jersey City", zip: "07302", url: "https://westchestercountyrepair.com/ny/fairview/"},
  {name: "Elmsford", zip: "07605", url: "https://westchestercountyrepair.com/ny/elmsford/"},
  {name: "Tarrytown", zip: "07643", url: "https://westchestercountyrepair.com/ny/tarrytown/"},
  {name: "Hartsdale", zip: "07644", url: "https://westchestercountyrepair.com/ny/hartsdale/"},
@@ -761,22 +759,17 @@
  {name: "White Plains", zip: "10601", url: "https://westchestercountyrepair.com/ny/harrison/"},
  {name: "Rye", zip: "07607", url: "https://westchestercountyrepair.com/ny/rye/"},
  {name: "Fairview", zip: "07432", url: "https://westchestercountyrepair.com/ny/fairview/"},
- {name: "Montvale", zip: "07645", url: "https://westchestercountyrepair.com/ny/new-rochelle/"},
  {name: "Village of Pelham", zip: "07074", url: "https://westchestercountyrepair.com/ny/village-of-pelham/"},
  {name: "Hastings-on-Hudson", zip: "07646", url: "https://westchestercountyrepair.com/ny/hastings-on-hudson/"},
- {name: "Newark", zip: "07102", url: "https://westchestercountyrepair.com/ny/scarsdale/"},
  {name: "Village of Pelham", zip: "07031", url: "https://westchestercountyrepair.com/ny/village-of-pelham/"},
  {name: "Valhalla", zip: "07647", url: "https://westchestercountyrepair.com/ny/valhalla/"},
  {name: "White Plains", zip: "07648", url: "https://westchestercountyrepair.com/ny/white-plains/"},
  {name: "Pelham Manor", zip: "07436", url: "https://westchestercountyrepair.com/ny/pelham-manor/"},
- {name: "Old Tappan", zip: "07675", url: "https://westchestercountyrepair.com/ny/yonkers/"},
  {name: "Yonkers", zip: "07649", url: "https://westchestercountyrepair.com/ny/yonkers/"},
  {name: "Ardsley", zip: "07650", url: "https://westchestercountyrepair.com/ny/ardsley/"},
  {name: "Yonkers", zip: "07652", url: "https://westchestercountyrepair.com/ny/yonkers/"},
  {name: "Bronxville", zip: "07656", url: "https://westchestercountyrepair.com/ny/bronxville/"},
  {name: "Dobbs Ferry", zip: "07446", url: "https://westchestercountyrepair.com/ny/dobbs-ferry/"},
- {name: "Ridgefield", zip: "07657", url: "https://westchestercountyrepair.com/ny/fairview/"},
- {name: "Ridgefield Park", zip: "07660", url: "https://westchestercountyrepair.com/ny/harrison/"},
  {name: "Mamaroneck", zip: "07450", url: "https://westchestercountyrepair.com/ny/mamaroneck/"},
  {name: "Eastchester", zip: "07661", url: "https://westchestercountyrepair.com/ny/eastchester/"},
  {name: "Elmsford", zip: "07675", url: "https://westchestercountyrepair.com/ny/elmsford/"},
@@ -839,12 +832,12 @@
 
  function populateServiceAreasSubmenu() {
  console.log('Populating service areas submenu...');
- console.log('Towns array length:', bergenTowns.length);
- serviceAreasSubmenu.innerHTML = bergenTowns.map(t => {
+ console.log('Towns array length:', westchesterTowns.length);
+ serviceAreasSubmenu.innerHTML = westchesterTowns.map(t => {
  console.log(`Generating submenu link for ${t.name}: ${t.url}`);
  return `<li><a href="${t.url}" class="service-area-link" aria-label="Appliance Repair in ${t.name}">${t.name}</a></li>`;
  }).join('');
- console.log('Service areas submenu populated with towns:', bergenTowns.map(t => ({name: t.name, url: t.url})));
+ console.log('Service areas submenu populated with towns:', westchesterTowns.map(t => ({name: t.name, url: t.url})));
  console.log('Service areas submenu height:', serviceAreasSubmenu.scrollHeight + 'px');
  console.log('Service areas submenu scrollable:', serviceAreasSubmenu.scrollHeight > serviceAreasSubmenu.clientHeight);
  }
