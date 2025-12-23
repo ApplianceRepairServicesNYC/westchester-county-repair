@@ -390,15 +390,27 @@
  box-sizing: border-box;
  }
  .logo-link {
- font-size: 26px;
- font-weight: 700;
- color: white;
- text-decoration: none;
- display: inline-block;
- }
- .logo-link:hover {
- color: #ddd;
- }
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+.logo-link:hover {
+    opacity: 0.9;
+}
+.logo-svg {
+    height: 50px;
+    width: auto;
+}
+@media (max-width: 768px) {
+.logo-svg {
+    height: 40px;
+}
+}
+@media (max-width: 480px) {
+.logo-svg {
+    height: 32px;
+}
+}
  .nav-wrapper {
  display: flex;
  justify-content: space-between;
@@ -1263,7 +1275,7 @@
 <body>
  <header>
  <div class="container nav-wrapper">
- <a href="https://westchestercountyrepair.com/" class="logo-link" aria-label="Return to Westchester County Appliance Repair Homepage">Westchester County Appliance Repair</a>
+ <a href="https://westchestercountyrepair.com/" class="logo-link" aria-label="Return to Westchester County Appliance Repair Homepage"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 55" class="logo-svg"><defs><linearGradient id="fridgeGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#e8ecf1"/><stop offset="100%" style="stop-color:#c5cdd8"/></linearGradient><linearGradient id="badgeGrad" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#3b6cb5"/><stop offset="100%" style="stop-color:#1e3a6e"/></linearGradient></defs><!-- Badge circle --><circle cx="27" cy="27.5" r="25" fill="url(#badgeGrad)" stroke="#5a8ad4" stroke-width="2"/><!-- Refrigerator body --><rect x="14" y="8" width="22" height="38" rx="2" fill="url(#fridgeGrad)" stroke="#8896a7" stroke-width="1"/><!-- Freezer door --><rect x="15" y="9" width="20" height="12" rx="1" fill="#f5f7fa" stroke="#a0aec0" stroke-width="0.5"/><!-- Freezer handle --><rect x="32" y="12" width="2" height="6" rx="0.5" fill="#6b7c8f"/><!-- Fridge door --><rect x="15" y="23" width="20" height="22" rx="1" fill="#f5f7fa" stroke="#a0aec0" stroke-width="0.5"/><!-- Fridge handle --><rect x="32" y="28" width="2" height="12" rx="0.5" fill="#6b7c8f"/><!-- Wrench tool --><g transform="translate(6, 20) rotate(-30)"><rect x="0" y="8" width="4" height="18" rx="1" fill="#f97316"/><path d="M-2 4 L2 0 L6 4 L6 10 L4 10 L4 7 L2 5 L0 7 L0 10 L-2 10 Z" fill="#71717a"/></g><!-- Text --><text x="58" y="24" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#ffffff" letter-spacing="0.5">WESTCHESTER</text><text x="58" y="43" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="600" fill="#f97316" letter-spacing="1.5">APPLIANCE REPAIR</text></svg></a>
  <div class="nav-right">
  <div class="services-menu" id="servicesMenu">
  <div class="services-btn" id="servicesToggle">Services</div>
