@@ -276,29 +276,6 @@
  background: #c41b20;
  transform: translateY(-2px);
  }
-.nav-reviews-btn {
-    color: #ffc107;
-    font-weight: 600;
-    cursor: pointer;
-    padding: 10px 18px;
-    border-radius: 6px;
-    background: transparent;
-    border: 2px solid #ffc107;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.3s ease;
-    text-decoration: none;
-}
-.nav-reviews-btn:hover {
-    background: rgba(255, 193, 7, 0.15);
-    transform: translateY(-2px);
-}
-.nav-reviews-btn .stars {
-    font-size: 14px;
-    letter-spacing: 1px;
-}
  .services-dropdown {
  display: none;
  position: fixed;
@@ -1175,7 +1152,6 @@
 </div>
  </ul>
  </div>
- <a href="#reviewsToggle" class="nav-reviews-btn" onclick="document.getElementById('reviewsToggle').checked=true;document.getElementById('reviewsToggle').scrollIntoView({behavior:'smooth',block:'center'});return false;"><span class="stars">★★★★★</span>Reviews</a>
  <button class="nav-call-btn" id="navCallNow">📞 Call Now</button>
  </div>
  </div>
@@ -1200,6 +1176,22 @@
 .reviews-accordion label .text .title{font-size:20px;display:block;margin-bottom:4px}
 .reviews-accordion label .text .subtitle{font-size:13px;opacity:0.9;display:block;font-weight:400}
 .reviews-accordion label .arrow{color:#ffc107;font-size:28px;animation:bounce-right 1s ease-in-out infinite}
+@media (max-width: 768px) {
+.reviews-accordion label{padding:18px 20px;gap:12px;border-radius:12px;font-size:16px}
+.reviews-accordion label::after{font-size:50px;right:10px}
+.reviews-accordion label .stars{font-size:20px;letter-spacing:2px}
+.reviews-accordion label .text .title{font-size:16px}
+.reviews-accordion label .text .subtitle{font-size:11px}
+.reviews-accordion label .arrow{font-size:22px}
+}
+@media (max-width: 480px) {
+.reviews-accordion label{padding:15px 16px;gap:10px;border-radius:10px;flex-wrap:wrap}
+.reviews-accordion label::after{display:none}
+.reviews-accordion label .stars{font-size:18px;letter-spacing:1px}
+.reviews-accordion label .text .title{font-size:15px}
+.reviews-accordion label .text .subtitle{font-size:10px}
+.reviews-accordion label .arrow{font-size:20px}
+}
 @keyframes bounce-right{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
 .reviews-accordion .reviews-content{max-height:0;overflow:hidden;transition:max-height 0.5s ease,overflow 0s 0.5s;background:linear-gradient(180deg,#f8f9fa 0%,#e9ecef 100%);border-radius:0 0 12px 12px;margin:-5px auto 0;max-width:900px;text-align:center;display:flex;flex-direction:column;align-items:center}
 .reviews-accordion input:checked~.reviews-content{max-height:none;padding:30px;overflow:visible}
