@@ -1077,7 +1077,54 @@
  <button class="btn" id="heroCallNow">Request Service Today</button>
  </div>
  </section>
- <section style="padding: 60px 0; background: #fff;" aria-labelledby="about-section-heading">
+ <style>
+.reviews-accordion{margin:40px auto;max-width:1000px;padding:0 20px;text-align:center}
+.reviews-accordion input[type="checkbox"]{display:none}
+.reviews-accordion label{display:flex;align-items:center;justify-content:center;gap:20px;background:linear-gradient(135deg,#003087 0%,#0052cc 50%,#003087 100%);color:#fff;padding:25px 35px;border-radius:16px;cursor:pointer;font-weight:700;font-size:18px;box-shadow:0 8px 30px rgba(0,48,135,0.3);transition:all 0.3s ease;margin:0 auto;border:3px solid #ffc107;position:relative;overflow:hidden}
+.reviews-accordion label:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,48,135,0.4)}
+.reviews-accordion label::after{content:'⭐';position:absolute;font-size:80px;opacity:0.1;right:20px;top:50%;transform:translateY(-50%)}
+.reviews-accordion label .stars{color:#ffc107;font-size:28px;letter-spacing:3px;text-shadow:0 2px 10px rgba(0,0,0,0.3)}
+.reviews-accordion label .text{text-align:left}
+.reviews-accordion label .text .title{font-size:20px;display:block;margin-bottom:4px}
+.reviews-accordion label .text .subtitle{font-size:13px;opacity:0.9;display:block;font-weight:400}
+.reviews-accordion label .arrow{color:#ffc107;font-size:28px;animation:bounce-right 1s ease-in-out infinite}
+@media (max-width: 768px) {
+.reviews-accordion label{padding:18px 20px;gap:12px;border-radius:12px;font-size:16px}
+.reviews-accordion label::after{font-size:50px;right:10px}
+.reviews-accordion label .stars{font-size:20px;letter-spacing:2px}
+.reviews-accordion label .text .title{font-size:16px}
+.reviews-accordion label .text .subtitle{font-size:11px}
+.reviews-accordion label .arrow{font-size:22px}
+}
+@media (max-width: 480px) {
+.reviews-accordion label{padding:15px 16px;gap:10px;border-radius:10px;flex-wrap:wrap}
+.reviews-accordion label::after{display:none}
+.reviews-accordion label .stars{font-size:18px;letter-spacing:1px}
+.reviews-accordion label .text .title{font-size:15px}
+.reviews-accordion label .text .subtitle{font-size:10px}
+.reviews-accordion label .arrow{font-size:20px}
+}
+@keyframes bounce-right{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
+.reviews-accordion .reviews-content{max-height:0;overflow:hidden;transition:max-height 0.5s ease,overflow 0s 0.5s;background:linear-gradient(180deg,#f8f9fa 0%,#e9ecef 100%);border-radius:0 0 12px 12px;margin:-5px auto 0;max-width:900px;text-align:center;display:flex;flex-direction:column;align-items:center}
+.reviews-accordion input:checked~.reviews-content{max-height:none;padding:30px;overflow:visible}
+.reviews-accordion input:checked~label{border-radius:8px 8px 0 0}
+.reviews-header{text-align:center;margin-bottom:20px}
+.reviews-header h2{color:#003087;font-size:24px;margin-bottom:10px}
+.reviews-stars{color:#ffc107;font-size:28px;letter-spacing:2px}
+.reviews-count{color:#666;font-size:14px;margin-top:8px}
+.reviews-content [class^="elfsight-app"]{width:100%;margin:0 auto;min-height:auto;max-height:none;overflow:visible}
+.reviews-content [class^="elfsight-app"] *{max-height:none !important}
+</style>
+<div class="reviews-accordion">
+<input type="checkbox" id="reviewsToggle">
+<label for="reviewsToggle"><span class="stars">★★★★★</span><span class="text"><span class="title">Read Our Customer Reviews</span><span class="subtitle">Excellent on Google • 5-Star Service</span></span><span class="arrow">→</span></label>
+<div class="reviews-content">
+<div class="reviews-header"><h2 style="font-size: 24px; margin-bottom: 10px;">Google Business Profile</h2><div class="reviews-stars">★★★★★</div><div class="reviews-count">Excellent on Google</div></div>
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-1634a6d6-e2fc-4121-bbd0-0f75968833a4" data-elfsight-app-lazy></div>
+</div></div>
+
+<section style="padding: 60px 0; background: #fff;" aria-labelledby="about-section-heading">
  <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
  <article itemscope itemtype="https://schema.org/Service">
  <meta itemprop="serviceType" content="Microwave Repair">
