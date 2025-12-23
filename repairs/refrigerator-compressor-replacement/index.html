@@ -1014,7 +1014,7 @@
 </div>
  </ul>
  </div>
- <button class="nav-call-btn" id="navCallNow">Call Now</button>
+ <button class="nav-call-btn" id="navCallNow">📞 Call Now</button>
  </div>
  </div>
  </header>
@@ -2234,7 +2234,7 @@
  if (btn) {
  btn.addEventListener('click', function() {
  if (this.dataset.revealed) return;
- const digits = [2, 0, 1, 2, 9, 8, 3, 4, 9, 9];
+ const digits = [8, 0, 0, 3, 6, 8, 1, 9, 5, 8];
  const num = digits.join('');
  const formatted = '+1 (' + num.slice(0,3) + ') ' + num.slice(3,6) + '-' + num.slice(6);
  this.innerHTML = formatted;
