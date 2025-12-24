@@ -5,7 +5,7 @@
  <meta charset="UTF-8">
  <link rel="preload" as="image" href="https://cdn.avbportal.com/magento-media/website-themes/service-repair/homepage-hero-products-no-logo.png" fetchpriority="high">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Westchester County Appliance Repair | 56+ Brands | Same-Day Service</title>
+ <title>Westchester County Appliance Repair | Same-Day Service</title>
  <meta name="description" content="Expert appliance repair in Westchester County, New York. We service 56+ brands including Whirlpool, Samsung, appliance, GE, LG and more. Same-day service available.">
  <meta name="keywords" content="appliance repair Westchester County, washer repair NY, dryer repair, refrigerator repair, dishwasher repair, oven repair, microwave repair, same day appliance repair Westchester County">
  <meta name="author" content="Westchester County Appliance Repair">
@@ -1857,13 +1857,13 @@
  <section class="alt" id="contact">
  <div class="container">
  <section id="sa-service-areas">
- <h2>Service Areas – All of Westchester County, NY</h2>
- <p>We proudly serve <strong>every single town and municipality</strong> in Westchester County with fast, reliable, same-day appliance repair.</p>
+ <h2>Service Areas – Select Areas of Westchester County, NY</h2>
+ <p>We proudly serve <strong>select towns and municipalities</strong> in Westchester County with fast, reliable, same-day appliance repair.</p>
  <div class="sa-dropdown-container">
- <button class="sa-dropdown-button" id="saToggleBtn">View All Westchester County Service Areas</button>
+ <button class="sa-dropdown-button" id="saToggleBtn">View Select Westchester County Service Areas</button>
  <div class="sa-dropdown-content" id="saDropdownContent">
  <div class="sa-slide">
- <h2>All Westchester County NY Towns We Service</h2>
+ <h2>Select Westchester County NY Towns We Service</h2>
  <ul id="townsList">
 <li><a href="https://westchestercountyrepair.com/ny/ardsley/"><h3>Ardsley</h3></a></li>
 <li><a href="https://westchestercountyrepair.com/ny/bronxville/"><h3>Bronxville</h3></a></li>
@@ -1894,6 +1894,234 @@
 </section>
 </div>
 </section>
+
+<!-- Schedule Your Repair Form Section -->
+<section style="padding: 60px 0; background: #fff;">
+<div class="container" style="max-width: 800px;">
+<style>
+.schedule-form-container {
+ background: linear-gradient(135deg, #003087 0%, #00205B 50%, #001A45 100%);
+ border-radius: 16px;
+ padding: 0;
+ max-height: 0;
+ overflow: hidden;
+ opacity: 0;
+ transition: all 0.5s ease;
+}
+.schedule-form-container.active {
+ max-height: 1200px;
+ opacity: 1;
+ padding: 40px;
+ margin-top: 20px;
+}
+.schedule-form-header {
+ text-align: center;
+ margin-bottom: 30px;
+}
+.schedule-form-header h2 {
+ color: white;
+ margin: 0 0 10px;
+ font-size: 28px;
+}
+.schedule-form-header p {
+ color: rgba(255,255,255,0.9);
+ margin: 0;
+ font-size: 15px;
+}
+.schedule-form {
+ background: rgba(255, 255, 255, 0.95);
+ border-radius: 12px;
+ padding: 30px;
+}
+.sf-form-group {
+ margin-bottom: 20px;
+}
+.sf-form-group label {
+ display: block;
+ font-size: 15px;
+ font-weight: 600;
+ color: #333;
+ margin-bottom: 8px;
+}
+.sf-form-group input,
+.sf-form-group select,
+.sf-form-group textarea {
+ width: 100%;
+ padding: 14px;
+ font-size: 16px;
+ border: 2px solid #e0e0e0;
+ border-radius: 8px;
+ background: #fff;
+ box-sizing: border-box;
+ transition: border-color 0.3s;
+}
+.sf-form-group input:focus,
+.sf-form-group select:focus,
+.sf-form-group textarea:focus {
+ outline: none;
+ border-color: var(--blue);
+}
+.sf-form-group select {
+ cursor: pointer;
+ appearance: none;
+ background-image: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2712%27 height=%2712%27 viewBox=%270 0 12 12%27%3E%3Cpath fill=%27%23333%27 d=%27M6 8L1 3h10z%27/%3E%3C/svg%3E');
+ background-repeat: no-repeat;
+ background-position: right 14px center;
+ padding-right: 40px;
+}
+.sf-form-group textarea {
+ resize: vertical;
+ min-height: 120px;
+}
+.sf-form-row {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 20px;
+}
+@media (max-width: 600px) {
+ .sf-form-row {
+ grid-template-columns: 1fr;
+ }
+ .schedule-form-container {
+ padding: 25px;
+ }
+ .schedule-form {
+ padding: 20px;
+ }
+}
+.sf-form-submit {
+ background: linear-gradient(135deg, var(--blue) 0%, #0052cc 100%);
+ color: white;
+ font-size: 18px;
+ font-weight: 700;
+ padding: 18px 40px;
+ border: none;
+ border-radius: 8px;
+ cursor: pointer;
+ width: 100%;
+ margin-top: 10px;
+ transition: all 0.3s;
+}
+.sf-form-submit:hover {
+ transform: translateY(-2px);
+ box-shadow: 0 6px 20px rgba(0,48,135,0.3);
+}
+.sf-modal-overlay {
+ display: none;
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: rgba(0,0,0,0.6);
+ z-index: 9999;
+}
+.sf-modal-overlay.active {
+ display: block;
+}
+.sf-success-modal {
+ display: none;
+ position: fixed;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ background: white;
+ padding: 40px;
+ border-radius: 16px;
+ text-align: center;
+ z-index: 10000;
+ max-width: 90%;
+ width: 400px;
+ box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+.sf-success-modal.active {
+ display: block;
+}
+.sf-success-modal p {
+ font-size: 18px;
+ color: var(--blue);
+ line-height: 1.6;
+ margin: 0 0 25px;
+}
+.sf-close-modal {
+ background: var(--blue);
+ color: white;
+ padding: 12px 30px;
+ border: none;
+ border-radius: 8px;
+ font-size: 16px;
+ font-weight: 600;
+ cursor: pointer;
+}
+.sf-close-modal:hover {
+ background: #002266;
+}
+</style>
+<div style="text-align: center; margin-bottom: 10px;">
+<button id="scheduleFormToggle" style="background: linear-gradient(135deg, #003087 0%, #0052cc 100%); color: white; padding: 20px 50px; border: 3px solid #ffc107; border-radius: 12px; font-size: 20px; font-weight: 700; cursor: pointer; transition: all 0.3s; box-shadow: 0 6px 20px rgba(0,48,135,0.3);">📅 Schedule Your Repair Online</button>
+</div>
+<div class="schedule-form-container" id="scheduleFormContainer">
+ <div class="schedule-form-header">
+ <h2>Schedule Your Repair</h2>
+ <p>Complete the form below and a representative will contact you within 30 minutes to confirm your appointment.</p>
+ </div>
+ <form id="scheduleForm" class="schedule-form">
+ <div class="sf-form-row">
+ <div class="sf-form-group">
+ <label for="sfName">Name *</label>
+ <input type="text" id="sfName" name="from_name" placeholder="John Doe" required>
+ </div>
+ <div class="sf-form-group">
+ <label for="sfEmail">Email *</label>
+ <input type="email" id="sfEmail" name="user_email" placeholder="john@example.com" required>
+ </div>
+ </div>
+ <input type="hidden" name="reply_to" id="sfReplyTo">
+ <input type="hidden" name="email" id="sfEmailHidden">
+ <input type="hidden" name="from_email" id="sfFromEmail">
+ <input type="hidden" name="customer_email" id="sfCustomerEmail">
+ <div class="sf-form-row">
+ <div class="sf-form-group">
+ <label for="sfPhone">Phone *</label>
+ <input type="tel" id="sfPhone" name="phone" placeholder="914-555-1234" required>
+ </div>
+ <div class="sf-form-group">
+ <label for="sfSubject">Appliance Type *</label>
+ <select id="sfSubject" name="subject" required>
+ <option value="" disabled selected>Select Appliance...</option>
+ <option value="Washer Repair">Washer</option>
+ <option value="Dryer Repair">Dryer</option>
+ <option value="Refrigerator Repair">Refrigerator</option>
+ <option value="Dishwasher Repair">Dishwasher</option>
+ <option value="Oven/Range Repair">Oven / Range</option>
+ <option value="Cooktop Repair">Cooktop</option>
+ <option value="Microwave Repair">Microwave</option>
+ <option value="Wine Cooler Repair">Wine Cooler</option>
+ <option value="Vent Hood Repair">Vent Hood</option>
+ <option value="Freezer Repair">Freezer</option>
+ <option value="Other Appliance">Other</option>
+ </select>
+ </div>
+ </div>
+ <div class="sf-form-group">
+ <label for="sfAddress">Service Address *</label>
+ <input type="text" id="sfAddress" name="address" placeholder="123 Main St, White Plains, NY 10601" required>
+ </div>
+ <div class="sf-form-group">
+ <label for="sfMessage">Describe the Problem *</label>
+ <textarea id="sfMessage" name="message" placeholder="Please describe the issue you're experiencing with your appliance (e.g., not cooling, making noise, won't start, error code displayed)..." required></textarea>
+ </div>
+ <button type="submit" class="sf-form-submit">Submit Service Request</button>
+ </form>
+</div>
+</div>
+</section>
+
+<div class="sf-modal-overlay" id="sfModalOverlay"></div>
+<div class="sf-success-modal" id="sfSuccessModal">
+ <p id="sfSuccessMessage"><strong>Thank you!</strong><br><br>Your request has been sent.<br><br>We will contact you within 30 minutes.</p>
+ <button class="sf-close-modal" id="sfCloseModal">Close</button>
+</div>
 
 <footer>
 <div class="footer-main">
@@ -2002,7 +2230,7 @@
 <a href="https://westchestercountyrepair.com/brands/asko/">https://westchestercountyrepair.com/brands/asko/</a>
 <a href="https://westchestercountyrepair.com/brands/avantgarde/">https://westchestercountyrepair.com/brands/avantgarde/</a>
 <a href="https://westchestercountyrepair.com/brands/beaumark/">https://westchestercountyrepair.com/brands/beaumark/</a>
-<a href="https://westchestercountyrepair.com/brands/bertazzoni-appliances/">https://westchestercountyrepair.com/brands/bertazzoni-appliances/</a>
+<a href="https://westchestercountyrepair.com/brands/bertazzoni/">https://westchestercountyrepair.com/brands/bertazzoni/</a>
 <a href="https://westchestercountyrepair.com/brands/bertazzoni/">https://westchestercountyrepair.com/brands/bertazzoni/</a>
 <a href="https://westchestercountyrepair.com/brands/blomberg/">https://westchestercountyrepair.com/brands/blomberg/</a>
 <a href="https://westchestercountyrepair.com/brands/bluestar/">https://westchestercountyrepair.com/brands/bluestar/</a>
@@ -3082,6 +3310,61 @@
  [id^="expandable-text-"].expanded::-webkit-scrollbar-thumb:hover { background: var(--red); }
  [id^="expandable-text-"].expanded { scrollbar-width: thin; scrollbar-color: var(--blue) #f1f1f1; }
  </style>
- <script>var emailjs=function(e){"use strict";class t{constructor(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:0,t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"Network Error";this.status=e,this.text=t}}const i={origin:"https://api.emailjs.com",blockHeadless:!1,storageProvider:(()=>{if("undefined"!=typeof localStorage)return{get:e=>Promise.resolve(localStorage.getItem(e)),set:(e,t)=>Promise.resolve(localStorage.setItem(e,t)),remove:e=>Promise.resolve(localStorage.removeItem(e))}})()},r=e=>e?"string"==typeof e?{publicKey:e}:"[object Object]"===e.toString()?e:{}:{},o=function(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"https://api.emailjs.com";if(!e)return;const o=r(e);i.publicKey=o.publicKey,i.blockHeadless=o.blockHeadless,i.storageProvider=o.storageProvider,i.blockList=o.blockList,i.limitRate=o.limitRate,i.origin=o.origin||t},a=async function(e,r){let o=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{};const a=await fetch(i.origin+e,{method:"POST",headers:o,body:r}),s=await a.text(),n=new t(a.status,s);if(a.ok)return n;throw n},s=(e,t,i)=>{if(!e||"string"!=typeof e)throw"The public key is required. Visit https://dashboard.emailjs.com/admin/account";if(!t||"string"!=typeof t)throw"The service ID is required. Visit https://dashboard.emailjs.com/admin";if(!i||"string"!=typeof i)throw"The template ID is required. Visit https://dashboard.emailjs.com/admin/templates"},n=e=>e.webdriver||!e.languages||0===e.languages.length,l=()=>new t(451,"Unavailable For Headless Browser"),c=(e,t)=>{if((e=>!e.list?.length||!e.watchVariable)(e))return!1;((e,t)=>{if(!Array.isArray(e))throw"The BlockList list has to be an array";if("string"!=typeof t)throw"The BlockList watchVariable has to be a string"})(e.list,e.watchVariable);const i=(r=t,o=e.watchVariable,r instanceof FormData?r.get(o):r[o]);var r,o;return"string"==typeof i&&e.list.includes(i)},d=()=>new t(403,"Forbidden"),m=async(e,t,i)=>{if(!t.throttle||!i)return!1;((e,t)=>{if("number"!=typeof e||e<0)throw"The LimitRate throttle has to be a positive number";if(t&&"string"!=typeof t)throw"The LimitRate ID has to be a non-empty string"})(t.throttle,t.id);const r=t.id||e,o=await(async(e,t,i)=>{const r=Number(await i.get(e)||0);return t-Date.now()+r})(r,t.throttle,i);return o>0||(await i.set(r,Date.now().toString()),!1)},h=()=>new t(429,"Too Many Requests"),p=async(e,t,o,p)=>{const u=r(p),b=u.publicKey||i.publicKey,g=u.blockHeadless||i.blockHeadless,f=u.storageProvider||i.storageProvider,w={...i.blockList,...u.blockList},y={...i.limitRate,...u.limitRate};if(g&&n(navigator))return Promise.reject(l());if(s(b,e,t),(e=>{if(e&&"[object Object]"!==e.toString())throw"The template params have to be the object. Visit https://www.emailjs.com/docs/sdk/send/"})(o),o&&c(w,o))return Promise.reject(d());if(await m(location.pathname,y,f))return Promise.reject(h());const v={lib_version:"4.4.1",user_id:b,service_id:e,template_id:t,template_params:o};return a("/api/v1.0/email/send",JSON.stringify(v),{"Content-type":"application/json"})},u=async(e,t,o,p)=>{const u=r(p),b=u.publicKey||i.publicKey,g=u.blockHeadless||i.blockHeadless,f=i.storageProvider||u.storageProvider,w={...i.blockList,...u.blockList},y={...i.limitRate,...u.limitRate};if(g&&n(navigator))return Promise.reject(l());const v=(e=>"string"==typeof e?document.querySelector(e):e)(o);s(b,e,t),(e=>{if(!e||"FORM"!==e.nodeName)throw"The 3rd parameter is expected to be the HTML form element or the style selector of the form"})(v);const j=new FormData(v);return c(w,j)?Promise.reject(d()):await m(location.pathname,y,f)?Promise.reject(h()):(j.append("lib_version","4.4.1"),j.append("service_id",e),j.append("template_id",t),j.append("user_id",b),a("/api/v1.0/email/send-form",j))};var b={init:o,send:p,sendForm:u,EmailJSResponseStatus:t};return e.EmailJSResponseStatus=t,e.default=b,e.init=o,e.send=p,e.sendForm=u,Object.defineProperty(e,"__esModule",{value:!0}),e}({});emailjs.init({publicKey:'zfCrLmZU8eK9CuZcs'});</script>
+ <script>
+// Schedule Form Toggle
+const scheduleFormToggle = document.getElementById('scheduleFormToggle');
+const scheduleFormContainer = document.getElementById('scheduleFormContainer');
+if (scheduleFormToggle && scheduleFormContainer) {
+ scheduleFormToggle.addEventListener('click', function() {
+ scheduleFormContainer.classList.toggle('active');
+ if (scheduleFormContainer.classList.contains('active')) {
+ setTimeout(function() {
+ scheduleFormContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+ }, 100);
+ }
+ });
+}
+
+// Schedule Form submission
+const scheduleForm = document.getElementById('scheduleForm');
+if (scheduleForm) {
+ scheduleForm.addEventListener('submit', function(e) {
+ e.preventDefault();
+ const email = this.user_email.value.trim();
+ 
+ document.getElementById('sfReplyTo').value = email;
+ document.getElementById('sfEmailHidden').value = email;
+ document.getElementById('sfFromEmail').value = email;
+ document.getElementById('sfCustomerEmail').value = email;
+ 
+ emailjs.sendForm('service_emxksio', 'template_tmexlql', this)
+ .then(function() {
+ scheduleForm.reset();
+ document.getElementById('sfSuccessMessage').innerHTML = '<strong>Thank you!</strong><br><br>Your request has been sent.<br><br>We will contact you at<br><strong>' + email + '</strong><br>within the next 30 minutes.';
+ document.getElementById('sfSuccessModal').classList.add('active');
+ document.getElementById('sfModalOverlay').classList.add('active');
+ })
+ .catch(function() {
+ alert('Failed to send. Please try again or call us.');
+ });
+ });
+}
+
+const sfCloseModal = document.getElementById('sfCloseModal');
+if (sfCloseModal) {
+ sfCloseModal.onclick = function() {
+ document.getElementById('sfSuccessModal').classList.remove('active');
+ document.getElementById('sfModalOverlay').classList.remove('active');
+ };
+}
+
+const sfModalOverlay = document.getElementById('sfModalOverlay');
+if (sfModalOverlay) {
+ sfModalOverlay.onclick = function() {
+ if (sfCloseModal) sfCloseModal.click();
+ };
+}
+</script>
+<script>var emailjs=function(e){"use strict";class t{constructor(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:0,t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"Network Error";this.status=e,this.text=t}}const i={origin:"https://api.emailjs.com",blockHeadless:!1,storageProvider:(()=>{if("undefined"!=typeof localStorage)return{get:e=>Promise.resolve(localStorage.getItem(e)),set:(e,t)=>Promise.resolve(localStorage.setItem(e,t)),remove:e=>Promise.resolve(localStorage.removeItem(e))}})()},r=e=>e?"string"==typeof e?{publicKey:e}:"[object Object]"===e.toString()?e:{}:{},o=function(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"https://api.emailjs.com";if(!e)return;const o=r(e);i.publicKey=o.publicKey,i.blockHeadless=o.blockHeadless,i.storageProvider=o.storageProvider,i.blockList=o.blockList,i.limitRate=o.limitRate,i.origin=o.origin||t},a=async function(e,r){let o=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{};const a=await fetch(i.origin+e,{method:"POST",headers:o,body:r}),s=await a.text(),n=new t(a.status,s);if(a.ok)return n;throw n},s=(e,t,i)=>{if(!e||"string"!=typeof e)throw"The public key is required. Visit https://dashboard.emailjs.com/admin/account";if(!t||"string"!=typeof t)throw"The service ID is required. Visit https://dashboard.emailjs.com/admin";if(!i||"string"!=typeof i)throw"The template ID is required. Visit https://dashboard.emailjs.com/admin/templates"},n=e=>e.webdriver||!e.languages||0===e.languages.length,l=()=>new t(451,"Unavailable For Headless Browser"),c=(e,t)=>{if((e=>!e.list?.length||!e.watchVariable)(e))return!1;((e,t)=>{if(!Array.isArray(e))throw"The BlockList list has to be an array";if("string"!=typeof t)throw"The BlockList watchVariable has to be a string"})(e.list,e.watchVariable);const i=(r=t,o=e.watchVariable,r instanceof FormData?r.get(o):r[o]);var r,o;return"string"==typeof i&&e.list.includes(i)},d=()=>new t(403,"Forbidden"),m=async(e,t,i)=>{if(!t.throttle||!i)return!1;((e,t)=>{if("number"!=typeof e||e<0)throw"The LimitRate throttle has to be a positive number";if(t&&"string"!=typeof t)throw"The LimitRate ID has to be a non-empty string"})(t.throttle,t.id);const r=t.id||e,o=await(async(e,t,i)=>{const r=Number(await i.get(e)||0);return t-Date.now()+r})(r,t.throttle,i);return o>0||(await i.set(r,Date.now().toString()),!1)},h=()=>new t(429,"Too Many Requests"),p=async(e,t,o,p)=>{const u=r(p),b=u.publicKey||i.publicKey,g=u.blockHeadless||i.blockHeadless,f=u.storageProvider||i.storageProvider,w={...i.blockList,...u.blockList},y={...i.limitRate,...u.limitRate};if(g&&n(navigator))return Promise.reject(l());if(s(b,e,t),(e=>{if(e&&"[object Object]"!==e.toString())throw"The template params have to be the object. Visit https://www.emailjs.com/docs/sdk/send/"})(o),o&&c(w,o))return Promise.reject(d());if(await m(location.pathname,y,f))return Promise.reject(h());const v={lib_version:"4.4.1",user_id:b,service_id:e,template_id:t,template_params:o};return a("/api/v1.0/email/send",JSON.stringify(v),{"Content-type":"application/json"})},u=async(e,t,o,p)=>{const u=r(p),b=u.publicKey||i.publicKey,g=u.blockHeadless||i.blockHeadless,f=i.storageProvider||u.storageProvider,w={...i.blockList,...u.blockList},y={...i.limitRate,...u.limitRate};if(g&&n(navigator))return Promise.reject(l());const v=(e=>"string"==typeof e?document.querySelector(e):e)(o);s(b,e,t),(e=>{if(!e||"FORM"!==e.nodeName)throw"The 3rd parameter is expected to be the HTML form element or the style selector of the form"})(v);const j=new FormData(v);return c(w,j)?Promise.reject(d()):await m(location.pathname,y,f)?Promise.reject(h()):(j.append("lib_version","4.4.1"),j.append("service_id",e),j.append("template_id",t),j.append("user_id",b),a("/api/v1.0/email/send-form",j))};var b={init:o,send:p,sendForm:u,EmailJSResponseStatus:t};return e.EmailJSResponseStatus=t,e.default=b,e.init=o,e.send=p,e.sendForm=u,Object.defineProperty(e,"__esModule",{value:!0}),e}({});emailjs.init({publicKey:'zfCrLmZU8eK9CuZcs'});</script>
 </body>
 </html>
