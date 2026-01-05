@@ -30,8 +30,10 @@ a:hover { color: var(--red); text-decoration: underline; }
 .brand-group h3, .town-group h3 { margin-top: 0; color: var(--blue); }
 .stats { background: linear-gradient(135deg, #003087 0%, #0052cc 100%); color: white; padding: 30px; border-radius: 12px; margin-bottom: 40px; }
 .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; text-align: center; }
-.stat-item h3 { font-size: 36px; margin-bottom: 5px; }
-.stat-item p { opacity: 0.9; }
+.stat-item { color: white; text-decoration: none; padding: 15px; border-radius: 8px; transition: background 0.3s; display: block; }
+.stat-item:hover { background: rgba(255,255,255,0.15); color: white; text-decoration: none; }
+.stat-item p { opacity: 0.95; font-size: 18px; font-weight: 500; margin: 0; }
+html { scroll-behavior: smooth; }
 footer { background: #1a1a2e; color: white; padding: 30px 0; text-align: center; }
 footer a { color: #ffc107; }
 </style>
@@ -50,26 +52,22 @@ footer a { color: #ffc107; }
 
 <div class="stats">
 <div class="stats-grid">
-<div class="stat-item">
-<h3>9</h3>
+<a href="#main-pages" class="stat-item">
 <p>Main Pages</p>
-</div>
-<div class="stat-item">
-<h3>10</h3>
+</a>
+<a href="#appliance-services" class="stat-item">
 <p>Appliance Services</p>
-</div>
-<div class="stat-item">
-<h3>238</h3>
+</a>
+<a href="#brands" class="stat-item">
 <p>Brand Pages</p>
-</div>
-<div class="stat-item">
-<h3>661</h3>
+</a>
+<a href="#locations" class="stat-item">
 <p>Location Pages</p>
-</div>
+</a>
 </div>
 </div>
 
-<section class="sitemap-section">
+<section class="sitemap-section" id="main-pages">
 <h2>Main Pages</h2>
 <ul>
 <li><a href="https://westchestercountyrepair.com/">Home</a></li>
@@ -85,7 +83,7 @@ footer a { color: #ffc107; }
 </ul>
 </section>
 
-<section class="sitemap-section">
+<section class="sitemap-section" id="appliance-services">
 <h2>Appliance Repair Services</h2>
 <ul class="sitemap-grid">
 <li><a href="https://westchestercountyrepair.com/appliances/cooktop-repair/">Cooktop Repair</a></li>
@@ -101,7 +99,7 @@ footer a { color: #ffc107; }
 </ul>
 </section>
 
-<section class="sitemap-section">
+<section class="sitemap-section" id="brands">
 <h2>Brands We Service (238 pages)</h2>
 <div class="brand-group">
 <h3>A</h3>
@@ -425,7 +423,7 @@ footer a { color: #ffc107; }
 </div>
 </section>
 
-<section class="sitemap-section">
+<section class="sitemap-section" id="locations">
 <h2>Service Locations in Westchester County (661 pages)</h2>
 <div class="town-group">
 <h3>Ardsley</h3>
