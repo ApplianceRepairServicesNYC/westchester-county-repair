@@ -1197,7 +1197,7 @@
  <div class="container">
  <h1>Authorized Appliance Repair<br>Westchester County, New York</h1>
  <p>Same-Day Service • Factory-Trained Technicians • All Westchester County</p>
- <button class="btn" id="heroCallNow">Request Service Today</button>
+ <button class="btn" id="heroScheduleBtn">Schedule Your Repair</button>
  </div>
  </section>
 
@@ -2349,7 +2349,18 @@
  
  setupCallButton(document.getElementById('navCallNow'));
  setupCallButton(document.getElementById('formCallNow'));
- setupCallButton(document.getElementById('heroCallNow'));
+ var heroScheduleBtn = document.getElementById('heroScheduleBtn');
+ if (heroScheduleBtn) {
+ heroScheduleBtn.addEventListener('click', function() {
+ var formContainer = document.getElementById('scheduleFormContainer');
+ if (formContainer && !formContainer.classList.contains('active')) {
+ formContainer.classList.add('active');
+ }
+ setTimeout(function() {
+ formContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+ }, 100);
+ });
+ }
  
  const cfContactForm = document.getElementById('cfContactForm');
  if (cfContactForm) {
