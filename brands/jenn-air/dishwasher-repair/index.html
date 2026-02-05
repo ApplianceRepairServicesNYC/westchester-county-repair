@@ -477,7 +477,10 @@
  box-sizing: border-box;
  }
  .hero h1 {
- font-size: 52px;
+ height: 120px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
  margin-bottom: 16px;
  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.9);
  line-height: 1.2;
@@ -584,17 +587,21 @@
  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
  }
  .service-icon {
- font-size: 52px;
+ height: 120px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
  margin-bottom: 20px;
  color: var(--blue);
  transition: color .3s;
  }
     .service-icon img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-
-    }
+            max-height: 80px;
+            width: auto;
+            object-fit: contain;
+            filter: brightness(1.15);
+            mix-blend-mode: multiply;
+        }
         .service h3 {
             min-height: 50px;
             display: flex;
@@ -1326,7 +1333,7 @@
  <h2 style="text-align:center; font-size:36px; margin-bottom:50px;">Factory Certified Service</h2>
              <div class="services-grid">
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/dishwasher.webp" alt="Jenn-Air Built-In Dishwasher repair" loading="lazy"></div>
+                    <div class="service-icon"><img src="/assets/images/appliances/dishwasher.webp" alt="Jenn-Air Built-In Dishwasher repair" width="80" height="80" loading="lazy"></div>
                     <h3>Jenn-Air Built-In Dishwasher Repair</h3>
                     <div class="service-types">
                         <h4>We Service All Types:</h4>
@@ -1368,7 +1375,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/dishwasher.webp" alt="Jenn-Air Portable Dishwasher repair" loading="lazy"></div>
+                    <div class="service-icon"><img src="/assets/images/appliances/dishwasher.webp" alt="Jenn-Air Portable Dishwasher repair" width="80" height="80" loading="lazy"></div>
                     <h3>Jenn-Air Portable Dishwasher Repair</h3>
                     <div class="service-types">
                         <h4>We Service All Types:</h4>
@@ -1410,7 +1417,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/dishwasher.webp" alt="Jenn-Air Drawer Dishwasher repair" loading="lazy"></div>
+                    <div class="service-icon"><img src="/assets/images/appliances/dishwasher.webp" alt="Jenn-Air Drawer Dishwasher repair" width="80" height="80" loading="lazy"></div>
                     <h3>Jenn-Air Drawer Dishwasher Repair</h3>
                     <div class="service-types">
                         <h4>We Service All Types:</h4>
@@ -1452,7 +1459,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/dishwasher.webp" alt="Jenn-Air Compact Dishwasher repair" loading="lazy"></div>
+                    <div class="service-icon"><img src="/assets/images/appliances/dishwasher.webp" alt="Jenn-Air Compact Dishwasher repair" width="80" height="80" loading="lazy"></div>
                     <h3>Jenn-Air Compact Dishwasher Repair</h3>
                     <div class="service-types">
                         <h4>We Service All Types:</h4>
@@ -1494,7 +1501,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/dishwasher.webp" alt="Jenn-Air Commercial Dishwasher repair" loading="lazy"></div>
+                    <div class="service-icon"><img src="/assets/images/appliances/dishwasher.webp" alt="Jenn-Air Commercial Dishwasher repair" width="80" height="80" loading="lazy"></div>
                     <h3>Jenn-Air Commercial Dishwasher Repair</h3>
                     <div class="service-types">
                         <h4>We Service All Types:</h4>
@@ -1536,7 +1543,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/dishwasher.webp" alt="Jenn-Air Panel-Ready Dishwasher repair" loading="lazy"></div>
+                    <div class="service-icon"><img src="/assets/images/appliances/dishwasher.webp" alt="Jenn-Air Panel-Ready Dishwasher repair" width="80" height="80" loading="lazy"></div>
                     <h3>Jenn-Air Panel-Ready Dishwasher Repair</h3>
                     <div class="service-types">
                         <h4>We Service All Types:</h4>
@@ -1578,7 +1585,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/dishwasher.webp" alt="Jenn-Air Top Control Dishwasher repair" loading="lazy"></div>
+                    <div class="service-icon"><img src="/assets/images/appliances/dishwasher.webp" alt="Jenn-Air Top Control Dishwasher repair" width="80" height="80" loading="lazy"></div>
                     <h3>Jenn-Air Top Control Dishwasher Repair</h3>
                     <div class="service-types">
                         <h4>We Service All Types:</h4>
@@ -1620,7 +1627,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/dishwasher.webp" alt="Jenn-Air Front Control Dishwasher repair" loading="lazy"></div>
+                    <div class="service-icon"><img src="/assets/images/appliances/dishwasher.webp" alt="Jenn-Air Front Control Dishwasher repair" width="80" height="80" loading="lazy"></div>
                     <h3>Jenn-Air Front Control Dishwasher Repair</h3>
                     <div class="service-types">
                         <h4>We Service All Types:</h4>
@@ -1662,7 +1669,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/dishwasher.webp" alt="Jenn-Air Smart Dishwasher repair" loading="lazy"></div>
+                    <div class="service-icon"><img src="/assets/images/appliances/dishwasher.webp" alt="Jenn-Air Smart Dishwasher repair" width="80" height="80" loading="lazy"></div>
                     <h3>Jenn-Air Smart Dishwasher Repair</h3>
                     <div class="service-types">
                         <h4>We Service All Types:</h4>

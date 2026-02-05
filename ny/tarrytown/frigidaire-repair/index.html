@@ -366,7 +366,10 @@
  box-sizing: border-box;
  }
  .hero h1 {
- font-size: 52px;
+ height: 120px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
  margin-bottom: 16px;
  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.9);
  line-height: 1.2;
@@ -473,17 +476,21 @@
  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
  }
  .service-icon {
- font-size: 52px;
+ height: 120px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
  margin-bottom: 20px;
  color: var(--blue);
  transition: color .3s;
  }
     .service-icon img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-
-    }
+            max-height: 80px;
+            width: auto;
+            object-fit: contain;
+            filter: brightness(1.15);
+            mix-blend-mode: multiply;
+        }
         .service h3 {
             min-height: 50px;
             display: flex;
@@ -1212,7 +1219,7 @@
  <h2 style="text-align:center; font-size:36px; margin-bottom:50px;">Factory Certified Service</h2>
  <div class="services-grid">
  <div class="service">
- <div class="service-icon"><img src="/assets/images/appliances/washer.webp" alt="Washer repair" loading="lazy"></div>
+ <div class="service-icon"><img src="/assets/images/appliances/washer.webp" alt="Washer repair" width="80" height="80" loading="lazy"></div>
  <h3>Washer Repair</h3>
  <div class="service-types">
  <h4>We Service All Types:</h4>
@@ -1239,7 +1246,7 @@
  </div>
  </div>
  <div class="service">
- <div class="service-icon"><img src="/assets/images/appliances/dryer.webp" alt="Dryer repair" loading="lazy"></div>
+ <div class="service-icon"><img src="/assets/images/appliances/dryer.webp" alt="Dryer repair" width="80" height="80" loading="lazy"></div>
  <h3>Dryer Repair</h3>
  <div class="service-types">
  <h4>We Service All Types:</h4>
@@ -1266,7 +1273,7 @@
  </div>
  </div>
  <div class="service">
- <div class="service-icon"><img src="/assets/images/appliances/oven.webp" alt="Oven repair" loading="lazy"></div>
+ <div class="service-icon"><img src="/assets/images/appliances/oven.webp" alt="Oven repair" width="80" height="80" loading="lazy"></div>
  <h3>Oven & Range Repair</h3>
  <div class="service-types">
  <h4>We Service All Types:</h4>
@@ -1293,7 +1300,7 @@
  </div>
  </div>
  <div class="service">
- <div class="service-icon"><img src="/assets/images/appliances/refrigerator.webp" alt="Refrigerator repair" loading="lazy"></div>
+ <div class="service-icon"><img src="/assets/images/appliances/refrigerator.webp" alt="Refrigerator repair" width="80" height="80" loading="lazy"></div>
  <h3>Refrigerator Repair</h3>
  <div class="service-types">
  <h4>We Service All Types:</h4>
@@ -1320,7 +1327,7 @@
  </div>
  </div>
  <div class="service">
- <div class="service-icon"><img src="/assets/images/appliances/dishwasher.webp" alt="Dishwasher repair" loading="lazy"></div>
+ <div class="service-icon"><img src="/assets/images/appliances/dishwasher.webp" alt="Dishwasher repair" width="80" height="80" loading="lazy"></div>
  <h3>Dishwasher Repair</h3>
  <div class="service-types">
  <h4>We Service All Types:</h4>
@@ -1347,7 +1354,7 @@
  </div>
  </div>
  <div class="service">
- <div class="service-icon"><img src="/assets/images/appliances/cooktop.webp" alt="Cooktop repair" loading="lazy"></div>
+ <div class="service-icon"><img src="/assets/images/appliances/cooktop.webp" alt="Cooktop repair" width="80" height="80" loading="lazy"></div>
  <h3>Cooktop Repair</h3>
  <div class="service-types">
  <h4>We Service All Types:</h4>
@@ -1374,7 +1381,7 @@
  </div>
  </div>
  <div class="service">
- <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="Microwave repair" loading="lazy"></div>
+ <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="Microwave repair" width="80" height="80" loading="lazy"></div>
  <h3>Microwave Repair</h3>
  <div class="service-types">
  <h4>We Service All Types:</h4>
@@ -1401,7 +1408,7 @@
  </div>
  </div>
  <div class="service">
- <div class="service-icon"><img src="/assets/images/appliances/wine-cooler.webp" alt="Wine cooler repair" loading="lazy"></div>
+ <div class="service-icon"><img src="/assets/images/appliances/wine-cooler.webp" alt="Wine cooler repair" width="80" height="80" loading="lazy"></div>
  <h3>Wine Cooler Repair</h3>
  <div class="service-types">
  <h4>We Service All Types:</h4>
@@ -1428,7 +1435,7 @@
  </div>
  </div>
  <div class="service">
- <div class="service-icon"><img src="/assets/images/appliances/hood-vent.webp" alt="Range hood repair" loading="lazy"></div>
+ <div class="service-icon"><img src="/assets/images/appliances/hood-vent.webp" alt="Range hood repair" width="80" height="80" loading="lazy"></div>
  <h3>Hood Vent Repair</h3>
  <div class="service-types">
  <h4>We Service All Types:</h4>

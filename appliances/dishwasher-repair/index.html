@@ -381,7 +381,10 @@
  box-sizing: border-box;
  }
  .hero h1 {
- font-size: 52px;
+ height: 120px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
  margin-bottom: 16px;
  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.9);
  line-height: 1.2;
@@ -488,17 +491,21 @@
  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
  }
  .service-icon {
- font-size: 52px;
+ height: 120px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
  margin-bottom: 20px;
  color: var(--blue);
  transition: color .3s;
  }
     .service-icon img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-
-    }
+            max-height: 80px;
+            width: auto;
+            object-fit: contain;
+            filter: brightness(1.15);
+            mix-blend-mode: multiply;
+        }
         .service h3 {
             min-height: 50px;
             display: flex;
@@ -1225,7 +1232,7 @@
  <h2 style="text-align:center; font-size:36px; margin-bottom:50px;">Factory Certified Dishwasher Repair</h2>
  <div class="services-grid">
  <div class="service">
- <div class="service-icon"><img src="/assets/images/appliances/dishwasher.webp" alt="Dishwasher repair" loading="lazy"></div>
+ <div class="service-icon"><img src="/assets/images/appliances/dishwasher.webp" alt="Dishwasher repair" width="80" height="80" loading="lazy"></div>
  <h3>Built-In Dishwasher Repair</h3>
  <div class="service-types">
  <h4>Common Issues We Fix:</h4>
@@ -1285,7 +1292,7 @@
  </div>
  </div>
  <div class="service">
- <div class="service-icon"><img src="/assets/images/appliances/washer.webp" alt="Washer repair" loading="lazy"></div>
+ <div class="service-icon"><img src="/assets/images/appliances/washer.webp" alt="Washer repair" width="80" height="80" loading="lazy"></div>
  <h3>Portable Dishwasher Repair</h3>
  <div class="service-types">
  <h4>Common Issues We Fix:</h4>
@@ -1345,7 +1352,7 @@
  </div>
  </div>
  <div class="service">
- <div class="service-icon"><img src="/assets/images/appliances/washer.webp" alt="Washer repair" loading="lazy"></div>
+ <div class="service-icon"><img src="/assets/images/appliances/washer.webp" alt="Washer repair" width="80" height="80" loading="lazy"></div>
  <h3>Drawer Dishwasher Repair</h3>
  <div class="service-types">
  <h4>Common Issues We Fix:</h4>
@@ -1405,7 +1412,7 @@
  </div>
  </div>
  <div class="service">
- <div class="service-icon"><img src="/assets/images/appliances/washer.webp" alt="Washer repair" loading="lazy"></div>
+ <div class="service-icon"><img src="/assets/images/appliances/washer.webp" alt="Washer repair" width="80" height="80" loading="lazy"></div>
  <h3>Top Control Dishwasher Repair</h3>
  <div class="service-types">
  <h4>Common Issues We Fix:</h4>
@@ -1465,7 +1472,7 @@
  </div>
  </div>
  <div class="service">
- <div class="service-icon"><img src="/assets/images/appliances/washer.webp" alt="Washer repair" loading="lazy"></div>
+ <div class="service-icon"><img src="/assets/images/appliances/washer.webp" alt="Washer repair" width="80" height="80" loading="lazy"></div>
  <h3>Front Control Dishwasher Repair</h3>
  <div class="service-types">
  <h4>Common Issues We Fix:</h4>
@@ -1525,7 +1532,7 @@
  </div>
  </div>
  <div class="service">
- <div class="service-icon"><img src="/assets/images/appliances/washer.webp" alt="Washer repair" loading="lazy"></div>
+ <div class="service-icon"><img src="/assets/images/appliances/washer.webp" alt="Washer repair" width="80" height="80" loading="lazy"></div>
  <h3>QuadWash Dishwasher Repair</h3>
  <div class="service-types">
  <h4>QuadWash Services:</h4>
@@ -1585,7 +1592,7 @@
  </div>
  </div>
  <div class="service">
- <div class="service-icon"><img src="/assets/images/appliances/washer.webp" alt="Washer repair" loading="lazy"></div>
+ <div class="service-icon"><img src="/assets/images/appliances/washer.webp" alt="Washer repair" width="80" height="80" loading="lazy"></div>
  <h3>TrueSteam Dishwasher Repair</h3>
  <div class="service-types">
  <h4>TrueSteam Services:</h4>
@@ -1645,7 +1652,7 @@
  </div>
  </div>
  <div class="service">
- <div class="service-icon"><img src="/assets/images/appliances/washer.webp" alt="Washer repair" loading="lazy"></div>
+ <div class="service-icon"><img src="/assets/images/appliances/washer.webp" alt="Washer repair" width="80" height="80" loading="lazy"></div>
  <h3>Smart ThinQ Dishwasher Repair</h3>
  <div class="service-types">
  <h4>Smart Services:</h4>
@@ -1705,7 +1712,7 @@
  </div>
  </div>
  <div class="service">
- <div class="service-icon"><img src="/assets/images/appliances/washer.webp" alt="Washer repair" loading="lazy"></div>
+ <div class="service-icon"><img src="/assets/images/appliances/washer.webp" alt="Washer repair" width="80" height="80" loading="lazy"></div>
  <h3>Commercial Dishwasher Repair</h3>
  <div class="service-types">
  <h4>Commercial Services:</h4>

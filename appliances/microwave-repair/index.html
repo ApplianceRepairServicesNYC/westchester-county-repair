@@ -381,7 +381,10 @@
  box-sizing: border-box;
  }
  .hero h1 {
- font-size: 52px;
+ height: 120px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
  margin-bottom: 16px;
  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.9);
  line-height: 1.2;
@@ -488,17 +491,21 @@
  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
  }
  .service-icon {
- font-size: 52px;
+ height: 120px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
  margin-bottom: 20px;
  color: var(--blue);
  transition: color .3s;
  }
     .service-icon img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-
-    }
+            max-height: 80px;
+            width: auto;
+            object-fit: contain;
+            filter: brightness(1.15);
+            mix-blend-mode: multiply;
+        }
         .service h3 {
             min-height: 50px;
             display: flex;
@@ -1228,7 +1235,7 @@
  <h2 style="text-align:center; font-size:36px; margin-bottom:50px;">Factory Certified Microwave Repair</h2>
  <div class="services-grid">
  <div class="service">
- <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="Microwave repair" loading="lazy"></div>
+ <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="Microwave repair" width="80" height="80" loading="lazy"></div>
  <h3>Countertop Microwave Repair</h3>
  <div class="service-types">
  <h4>Common Issues We Fix:</h4>
@@ -1288,7 +1295,7 @@
  </div>
  </div>
  <div class="service">
- <div class="service-icon"><img src="/assets/images/appliances/oven.webp" alt="Oven repair" loading="lazy"></div>
+ <div class="service-icon"><img src="/assets/images/appliances/oven.webp" alt="Oven repair" width="80" height="80" loading="lazy"></div>
  <h3>Over-the-Range Microwave Repair</h3>
  <div class="service-types">
  <h4>Common Issues We Fix:</h4>
@@ -1348,7 +1355,7 @@
  </div>
  </div>
  <div class="service">
- <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="Microwave repair" loading="lazy"></div>
+ <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="Microwave repair" width="80" height="80" loading="lazy"></div>
  <h3>Built-In Microwave Repair</h3>
  <div class="service-types">
  <h4>Common Issues We Fix:</h4>
@@ -1408,7 +1415,7 @@
  </div>
  </div>
  <div class="service">
- <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="Microwave repair" loading="lazy"></div>
+ <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="Microwave repair" width="80" height="80" loading="lazy"></div>
  <h3>Microwave Drawer Repair</h3>
  <div class="service-types">
  <h4>Common Issues We Fix:</h4>
@@ -1468,7 +1475,7 @@
  </div>
  </div>
  <div class="service">
- <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="Microwave repair" loading="lazy"></div>
+ <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="Microwave repair" width="80" height="80" loading="lazy"></div>
  <h3>Convection Microwave Repair</h3>
  <div class="service-types">
  <h4>Common Issues We Fix:</h4>
@@ -1528,7 +1535,7 @@
  </div>
  </div>
  <div class="service">
- <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="Microwave repair" loading="lazy"></div>
+ <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="Microwave repair" width="80" height="80" loading="lazy"></div>
  <h3>Smart Microwave Repair</h3>
  <div class="service-types">
  <h4>Smart Services:</h4>
@@ -1588,7 +1595,7 @@
  </div>
  </div>
  <div class="service">
- <div class="service-icon"><img src="/assets/images/appliances/oven.webp" alt="Oven repair" loading="lazy"></div>
+ <div class="service-icon"><img src="/assets/images/appliances/oven.webp" alt="Oven repair" width="80" height="80" loading="lazy"></div>
  <h3>Wall Oven Combo Repair</h3>
  <div class="service-types">
  <h4>Common Issues We Fix:</h4>
@@ -1648,7 +1655,7 @@
  </div>
  </div>
  <div class="service">
- <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="Microwave repair" loading="lazy"></div>
+ <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="Microwave repair" width="80" height="80" loading="lazy"></div>
  <h3>Low Profile Microwave Repair</h3>
  <div class="service-types">
  <h4>Common Issues We Fix:</h4>
@@ -1708,7 +1715,7 @@
  </div>
  </div>
  <div class="service">
- <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="Microwave repair" loading="lazy"></div>
+ <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="Microwave repair" width="80" height="80" loading="lazy"></div>
  <h3>Compact & Solo Microwave Repair</h3>
  <div class="service-types">
  <h4>Common Issues We Fix:</h4>
@@ -1768,7 +1775,7 @@
  </div>
  </div>
  <div class="service">
- <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="Microwave repair" loading="lazy"></div>
+ <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="Microwave repair" width="80" height="80" loading="lazy"></div>
  <h3>Commercial Microwave Repair</h3>
  <div class="service-types">
  <h4>Commercial Services:</h4>

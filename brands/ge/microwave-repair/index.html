@@ -477,7 +477,10 @@
  box-sizing: border-box;
  }
  .hero h1 {
- font-size: 52px;
+ height: 120px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
  margin-bottom: 16px;
  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.9);
  line-height: 1.2;
@@ -584,17 +587,21 @@
  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
  }
  .service-icon {
- font-size: 52px;
+ height: 120px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
  margin-bottom: 20px;
  color: var(--blue);
  transition: color .3s;
  }
     .service-icon img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-
-    }
+            max-height: 80px;
+            width: auto;
+            object-fit: contain;
+            filter: brightness(1.15);
+            mix-blend-mode: multiply;
+        }
         .service h3 {
             min-height: 50px;
             display: flex;
@@ -1326,7 +1333,7 @@
  <h2 style="text-align:center; font-size:36px; margin-bottom:50px;">Factory Certified Service</h2>
              <div class="services-grid">
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="GE Countertop Microwave repair" loading="lazy"></div>
+                    <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="GE Countertop Microwave repair" width="80" height="80" loading="lazy"></div>
                     <h3>GE Countertop Microwave Repair</h3>
                     <div class="service-types">
                         <h4>We Service All Types:</h4>
@@ -1368,7 +1375,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="GE Over-the-Range Microwave repair" loading="lazy"></div>
+                    <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="GE Over-the-Range Microwave repair" width="80" height="80" loading="lazy"></div>
                     <h3>GE Over-the-Range Microwave Repair</h3>
                     <div class="service-types">
                         <h4>We Service All Types:</h4>
@@ -1410,7 +1417,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="GE Built-In Microwave repair" loading="lazy"></div>
+                    <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="GE Built-In Microwave repair" width="80" height="80" loading="lazy"></div>
                     <h3>GE Built-In Microwave Repair</h3>
                     <div class="service-types">
                         <h4>We Service All Types:</h4>
@@ -1452,7 +1459,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="GE Drawer Microwave repair" loading="lazy"></div>
+                    <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="GE Drawer Microwave repair" width="80" height="80" loading="lazy"></div>
                     <h3>GE Drawer Microwave Repair</h3>
                     <div class="service-types">
                         <h4>We Service All Types:</h4>
@@ -1494,7 +1501,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="GE Convection Microwave repair" loading="lazy"></div>
+                    <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="GE Convection Microwave repair" width="80" height="80" loading="lazy"></div>
                     <h3>GE Convection Microwave Repair</h3>
                     <div class="service-types">
                         <h4>We Service All Types:</h4>
@@ -1536,7 +1543,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="GE Commercial Microwave repair" loading="lazy"></div>
+                    <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="GE Commercial Microwave repair" width="80" height="80" loading="lazy"></div>
                     <h3>GE Commercial Microwave Repair</h3>
                     <div class="service-types">
                         <h4>We Service All Types:</h4>
@@ -1578,7 +1585,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="GE Compact Microwave repair" loading="lazy"></div>
+                    <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="GE Compact Microwave repair" width="80" height="80" loading="lazy"></div>
                     <h3>GE Compact Microwave Repair</h3>
                     <div class="service-types">
                         <h4>We Service All Types:</h4>
@@ -1620,7 +1627,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="GE Smart Microwave repair" loading="lazy"></div>
+                    <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="GE Smart Microwave repair" width="80" height="80" loading="lazy"></div>
                     <h3>GE Smart Microwave Repair</h3>
                     <div class="service-types">
                         <h4>We Service All Types:</h4>
@@ -1662,7 +1669,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="GE Combination Microwave repair" loading="lazy"></div>
+                    <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="GE Combination Microwave repair" width="80" height="80" loading="lazy"></div>
                     <h3>GE Combination Microwave Repair</h3>
                     <div class="service-types">
                         <h4>We Service All Types:</h4>
