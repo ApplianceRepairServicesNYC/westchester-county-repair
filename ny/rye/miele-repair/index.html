@@ -1121,7 +1121,7 @@
  <div class="container">
  <h1>Miele Appliance Repair<br>Rye, NY</h1>
  <p>Same-Day Service • Factory-Trained Technicians • Rye, NY</p>
- <button class="btn" id="heroCallNow">Request Service Today</button>
+ <button class="btn" id="heroScheduleBtn">Schedule Your Repair</button>
  </div>
  </section>
 
@@ -1526,6 +1526,221 @@
 </section>
 
 
+<!-- Schedule Your Repair Form Section -->
+<section style="padding: 60px 0; background: #fff;">
+<div class="container" style="max-width: 800px;">
+<style>
+.schedule-form-container {
+ background: linear-gradient(135deg, #003087 0%, #00205B 50%, #001A45 100%);
+ border-radius: 16px;
+ padding: 0;
+ max-height: 0;
+ overflow: hidden;
+ opacity: 0;
+ transition: all 0.5s ease;
+}
+.schedule-form-container.active {
+ max-height: 1200px;
+ opacity: 1;
+ padding: 40px;
+ margin-top: 20px;
+}
+.schedule-form-header {
+ text-align: center;
+ margin-bottom: 30px;
+}
+.schedule-form-header h2 {
+ color: white;
+ margin: 0 0 10px;
+ font-size: 28px;
+}
+.schedule-form-header p {
+ color: rgba(255,255,255,0.9);
+ margin: 0;
+ font-size: 15px;
+}
+.schedule-form {
+ background: rgba(255, 255, 255, 0.95);
+ border-radius: 12px;
+ padding: 30px;
+}
+.sf-form-group {
+ margin-bottom: 20px;
+}
+.sf-form-group label {
+ display: block;
+ font-size: 15px;
+ font-weight: 600;
+ color: #333;
+ margin-bottom: 8px;
+}
+.sf-form-group input,
+.sf-form-group select,
+.sf-form-group textarea {
+ width: 100%;
+ padding: 14px;
+ font-size: 16px;
+ border: 2px solid #e0e0e0;
+ border-radius: 8px;
+ background: #fff;
+ box-sizing: border-box;
+ transition: border-color 0.3s;
+}
+.sf-form-group input:focus,
+.sf-form-group select:focus,
+.sf-form-group textarea:focus {
+ outline: none;
+ border-color: var(--blue);
+}
+.sf-form-group select {
+ cursor: pointer;
+ appearance: none;
+ background-image: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2712%27 height=%2712%27 viewBox=%270 0 12 12%27%3E%3Cpath fill=%27%23333%27 d=%27M6 8L1 3h10z%27/%3E%3C/svg%3E');
+ background-repeat: no-repeat;
+ background-position: right 14px center;
+ padding-right: 40px;
+}
+.sf-form-group textarea {
+ resize: vertical;
+ min-height: 120px;
+}
+.sf-form-row {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 20px;
+}
+@media (max-width: 600px) {
+ .sf-form-row {
+ grid-template-columns: 1fr;
+ }
+ .schedule-form-container.active {
+ padding: 25px;
+ }
+ .schedule-form {
+ padding: 20px;
+ }
+}
+.sf-form-submit {
+ background: linear-gradient(135deg, var(--blue) 0%, #0052cc 100%);
+ color: white;
+ font-size: 18px;
+ font-weight: 700;
+ padding: 18px 40px;
+ border: none;
+ border-radius: 8px;
+ cursor: pointer;
+ width: 100%;
+ margin-top: 10px;
+ transition: all 0.3s;
+}
+.sf-form-submit:hover {
+ transform: translateY(-2px);
+ box-shadow: 0 6px 20px rgba(0,48,135,0.4);
+}
+.sf-modal-overlay {
+ display: none;
+ position: fixed;
+ top: 0; left: 0; right: 0; bottom: 0;
+ background: rgba(0,0,0,0.5);
+ z-index: 9998;
+}
+.sf-modal-overlay.active { display: block; }
+.sf-success-modal {
+ display: none;
+ position: fixed;
+ top: 50%; left: 50%;
+ transform: translate(-50%, -50%);
+ background: white;
+ padding: 40px;
+ border-radius: 16px;
+ text-align: center;
+ z-index: 9999;
+ max-width: 400px;
+ width: 90%;
+ box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+.sf-success-modal.active { display: block; }
+.sf-close-modal {
+ background: var(--blue);
+ color: white;
+ padding: 12px 30px;
+ border: none;
+ border-radius: 8px;
+ font-size: 16px;
+ font-weight: 600;
+ cursor: pointer;
+ margin-top: 20px;
+}
+.sf-close-modal:hover {
+ background: #002266;
+}
+</style>
+<div style="text-align: center; margin-bottom: 10px;">
+<button id="scheduleFormToggle" style="background: linear-gradient(135deg, #003087 0%, #0052cc 100%); color: white; padding: 20px 50px; border: 3px solid #ffc107; border-radius: 12px; font-size: 20px; font-weight: 700; cursor: pointer; transition: all 0.3s; box-shadow: 0 6px 20px rgba(0,48,135,0.3);">&#x1F4C5; Schedule Your Repair Online</button>
+</div>
+<div class="schedule-form-container" id="scheduleFormContainer">
+ <div class="schedule-form-header">
+ <h2>Schedule Your Repair</h2>
+ <p>Complete the form below and a representative will contact you within 30 minutes to confirm your appointment.</p>
+ </div>
+ <form id="scheduleForm" class="schedule-form">
+ <div class="sf-form-row">
+ <div class="sf-form-group">
+ <label for="sfName">Name *</label>
+ <input type="text" id="sfName" name="from_name" placeholder="John Doe" required>
+ </div>
+ <div class="sf-form-group">
+ <label for="sfEmail">Email *</label>
+ <input type="email" id="sfEmail" name="user_email" placeholder="john@example.com" required>
+ </div>
+ </div>
+ <input type="hidden" name="reply_to" id="sfReplyTo">
+ <input type="hidden" name="email" id="sfEmailHidden">
+ <input type="hidden" name="from_email" id="sfFromEmail">
+ <input type="hidden" name="customer_email" id="sfCustomerEmail">
+ <div class="sf-form-row">
+ <div class="sf-form-group">
+ <label for="sfPhone">Phone *</label>
+ <input type="tel" id="sfPhone" name="phone" placeholder="914-555-1234" required>
+ </div>
+ <div class="sf-form-group">
+ <label for="sfSubject">Appliance Type *</label>
+ <select id="sfSubject" name="subject" required>
+ <option value="" disabled selected>Select Appliance...</option>
+ <option value="Washer Repair">Washer</option>
+ <option value="Dryer Repair">Dryer</option>
+ <option value="Refrigerator Repair">Refrigerator</option>
+ <option value="Dishwasher Repair">Dishwasher</option>
+ <option value="Oven/Range Repair">Oven / Range</option>
+ <option value="Cooktop Repair">Cooktop</option>
+ <option value="Microwave Repair">Microwave</option>
+ <option value="Wine Cooler Repair">Wine Cooler</option>
+ <option value="Vent Hood Repair">Vent Hood</option>
+ <option value="Freezer Repair">Freezer</option>
+ <option value="Other Appliance">Other</option>
+ </select>
+ </div>
+ </div>
+ <div class="sf-form-group">
+ <label for="sfAddress">Service Address *</label>
+ <input type="text" id="sfAddress" name="address" placeholder="123 Main St, White Plains, NY 10601" required>
+ </div>
+ <div class="sf-form-group">
+ <label for="sfMessage">Describe the Problem *</label>
+ <textarea id="sfMessage" name="message" placeholder="Please describe the issue you're experiencing with your appliance (e.g., not cooling, making noise, won't start, error code displayed)..." required></textarea>
+ </div>
+ <button type="submit" class="sf-form-submit">Submit Service Request</button>
+ </form>
+</div>
+</div>
+</section>
+
+<div class="sf-modal-overlay" id="sfModalOverlay"></div>
+<div class="sf-success-modal" id="sfSuccessModal">
+ <p id="sfSuccessMessage"><strong>Thank you!</strong><br><br>Your request has been sent.<br><br>We will contact you within 30 minutes.</p>
+ <button class="sf-close-modal" id="sfCloseModal">Close</button>
+</div>
+
 <!-- Internal Links Section -->
 <section style="padding: 40px 20px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
 <div class="container" style="max-width: 900px; margin: 0 auto;">
@@ -1713,7 +1928,18 @@
  
  setupCallButton(document.getElementById('navCallNow'));
  setupCallButton(document.getElementById('formCallNow'));
- setupCallButton(document.getElementById('heroCallNow'));
+ var heroScheduleBtn = document.getElementById('heroScheduleBtn');
+ if (heroScheduleBtn) {
+ heroScheduleBtn.addEventListener('click', function() {
+ var formContainer = document.getElementById('scheduleFormContainer');
+ if (formContainer && !formContainer.classList.contains('active')) {
+ formContainer.classList.add('active');
+ }
+ setTimeout(function() {
+ formContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+ }, 100);
+ });
+ }
  
  const cfContactForm = document.getElementById('cfContactForm');
  if (cfContactForm) {
