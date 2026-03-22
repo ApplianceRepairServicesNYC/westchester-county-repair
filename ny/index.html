@@ -27,16 +27,6 @@
  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;700&family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
  <!-- Font Awesome -->
 <!-- EmailJS -->
- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
- <script>
- (function() {
- try {
- emailjs.init({ publicKey: "zfCrLmZU8eK9CuZcs" });
- } catch (error) {
- console.error("Failed to initialize EmailJS:", error);
- }
- })();
- </script>
  <!-- LocalBusiness Schema -->
 <style>
  :root {
@@ -975,7 +965,7 @@
  <button class="form-call-now" id="formCallNow">📞 Call Now</button>
  <div class="cf-contact-form-section" id="cfContactFormSection">
  <p class="expect-text">What to Expect: Once you submit your request, a representative will contact you within 30 minutes...</p>
- <form id="cfContactForm" class="cf-contact-form">
+ <form id="cfContactForm" class="cf-contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
  <div class="cf-form-group"><label for="cfName">Name *</label><input type="text" id="cfName" name="from_name" placeholder="John Doe" required></div>
  <div class="cf-form-group"><label for="cfEmail">Email *</label><input type="email" id="cfEmail" name="user_email" placeholder="john@example.com" required></div>
  <div class="cf-form-group"><label for="cfPhone">Phone *</label><input type="tel" id="cfPhone" name="phone" placeholder="1234567890" required pattern="[0-9]{10}"></div>
@@ -1359,7 +1349,7 @@
  e.preventDefault();
  console.log('Form submitted (mobile:', window.innerWidth <= 768, ')');
  const email = this.user_email.value.trim();
- emailjs.sendForm('service_emxksio', 'template_tmexlql', this)
+ fetch('https://formspree.io/f/YOUR_FORM_ID', {method: 'POST', body: new FormData(this), headers: {'Accept': 'application/json'}})
  .then(() => {
  console.log('Form submission successful, email:', email);
  this.reset();

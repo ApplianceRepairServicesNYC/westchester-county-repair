@@ -22,18 +22,6 @@
  <link rel="apple-touch-icon" href="https://westchestercountyrepair.com/favicon.png">
  <link rel="shortcut icon" href="https://westchestercountyrepair.com/favicon.png">
  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;700&family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
- <script>
- (function() {
- try {
- emailjs.init({
- publicKey: "zfCrLmZU8eK9CuZcs"
- });
- } catch (error) {
- console.error("Failed to initialize EmailJS:", error);
- }
- })();
- </script>
 <style>
  :root {
  --blue: #003087;
@@ -2137,7 +2125,7 @@
  e.preventDefault();
  console.log('Form submitted (mobile:', window.innerWidth <= 768, ')');
  const email = this.user_email.value.trim();
- emailjs.sendForm('service_emxksio', 'template_tmexlql', this)
+ fetch('https://formspree.io/f/YOUR_FORM_ID', {method: 'POST', body: new FormData(this), headers: {'Accept': 'application/json'}})
  .then(() => {
  console.log('Form submission successful, email:', email);
  this.reset();
