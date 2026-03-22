@@ -1929,15 +1929,21 @@ We provide same-day Amana repair service throughout Hartsdale and surrounding We
  if (cfContactForm) {
  cfContactForm.addEventListener('submit', function(e) {
  e.preventDefault();
- const email = this.user_email.value.trim();
+ const email = this.email.value.trim();
 document.getElementById('replyToField').value = email;
- fetch('https://formsubmit.co/insuranceappliance@gmail.com', {method: 'POST', body: new FormData(this), headers: {'Accept': 'application/json'}}).then(function(response) { if (response.ok) {
+ fetch('https://formsubmit.co/insuranceappliance@gmail.com', {
+                        method: 'POST',
+                        body: new FormData(this),
+                        headers: {'Accept': 'application/json'}
+                    }).then(function(response) {
+                        if (response.ok) {
  cfContactForm.reset();
  document.getElementById('cfContactFormSection').classList.remove('active');
  document.getElementById('successMessage').innerHTML = '<strong>Thank you!</strong><br><br>Your request has been sent.<br><br>We will contact you at<br><strong>' + email + '</strong><br>within the next 30 minutes.';
  document.getElementById('cfSuccessModal').classList.add('active');
  document.getElementById('cfModalOverlay').classList.add('active');
- } }).catch(function() {
+ }
+                    }).catch(function() {
  alert('Failed to send. Please try again or call us.');
  });
  });

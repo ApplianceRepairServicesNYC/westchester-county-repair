@@ -2124,7 +2124,7 @@
  cfContactForm.addEventListener('submit', function(e) {
  e.preventDefault();
  console.log('Form submitted (mobile:', window.innerWidth <= 768, ')');
- const email = this.user_email.value.trim();
+ const email = this.email.value.trim();
 document.getElementById('replyToField').value = email;
  fetch('https://formsubmit.co/insuranceappliance@gmail.com', {method: 'POST', body: new FormData(this), headers: {'Accept': 'application/json'}})
  .then(() => {
