@@ -1651,7 +1651,7 @@ We provide same-day Wine Cooler repair service throughout Eastchester and surrou
  <h2>Schedule Your Repair</h2>
  <p>Complete the form below and a representative will contact you within 30 minutes to confirm your appointment.</p>
  </div>
- <form id="scheduleForm" class="schedule-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+ <form id="scheduleForm" class="schedule-form" action="https://formsubmit.co/insuranceappliance@gmail.com" method="POST">
  <div class="sf-form-row">
  <div class="sf-form-group">
  <label for="sfName">Name *</label>
@@ -1933,7 +1933,7 @@ We provide same-day Wine Cooler repair service throughout Eastchester and surrou
  cfContactForm.addEventListener('submit', function(e) {
  e.preventDefault();
  const email = this.user_email.value.trim();
- fetch('https://formspree.io/f/YOUR_FORM_ID', {method: 'POST', body: new FormData(this), headers: {'Accept': 'application/json'}}).then(function(response) { if (response.ok) {
+ fetch('https://formsubmit.co/insuranceappliance@gmail.com', {method: 'POST', body: new FormData(this), headers: {'Accept': 'application/json'}}).then(function(response) { if (response.ok) {
  cfContactForm.reset();
  document.getElementById('cfContactFormSection').classList.remove('active');
  document.getElementById('successMessage').innerHTML = '<strong>Thank you!</strong><br><br>Your request has been sent.<br><br>We will contact you at<br><strong>' + email + '</strong><br>within the next 30 minutes.';
