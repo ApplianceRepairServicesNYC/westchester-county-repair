@@ -714,6 +714,9 @@
  <p>Complete the form below and a representative will contact you within 30 minutes to confirm your appointment.</p>
  </div>
  <form id="cfContactForm" class="contact-form">
+                        <input type="hidden" name="_subject" value="New Appliance Repair Request - Westchester County">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
  <div class="form-row">
  <div class="form-group">
  <label for="cfName">Name *</label>
@@ -985,7 +988,7 @@
 document.getElementById('replyToField').value = email;
  
  // Set hidden fields
-fetch('https://formsubmit.co/insuranceappliance@gmail.com', {
+fetch('https://formsubmit.co/ajax/insuranceappliance@gmail.com', {
                         method: 'POST',
                         body: new FormData(this),
                         headers: {'Accept': 'application/json'}

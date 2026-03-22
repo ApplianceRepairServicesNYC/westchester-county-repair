@@ -1651,7 +1651,10 @@ We provide same-day Kenmore repair service throughout Village Of Pelham and surr
  <h2>Schedule Your Repair</h2>
  <p>Complete the form below and a representative will contact you within 30 minutes to confirm your appointment.</p>
  </div>
- <form id="scheduleForm" class="schedule-form" action="https://formsubmit.co/insuranceappliance@gmail.com" method="POST">
+ <form id="scheduleForm" class="schedule-form" action="https://formsubmit.co/ajax/insuranceappliance@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New Appliance Repair Request - Westchester County">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
  <div class="sf-form-row">
  <div class="sf-form-group">
  <label for="sfName">Name *</label>
@@ -1931,7 +1934,7 @@ We provide same-day Kenmore repair service throughout Village Of Pelham and surr
  e.preventDefault();
  const email = this.email.value.trim();
 document.getElementById('replyToField').value = email;
- fetch('https://formsubmit.co/insuranceappliance@gmail.com', {
+ fetch('https://formsubmit.co/ajax/insuranceappliance@gmail.com', {
                         method: 'POST',
                         body: new FormData(this),
                         headers: {'Accept': 'application/json'}

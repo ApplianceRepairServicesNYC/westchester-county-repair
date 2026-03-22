@@ -965,7 +965,10 @@
  <button class="form-call-now" id="formCallNow">📞 Call Now</button>
  <div class="cf-contact-form-section" id="cfContactFormSection">
  <p class="expect-text">What to Expect: Once you submit your request, a representative will contact you within 30 minutes...</p>
- <form id="cfContactForm" class="cf-contact-form" action="https://formsubmit.co/insuranceappliance@gmail.com" method="POST">
+ <form id="cfContactForm" class="cf-contact-form" action="https://formsubmit.co/ajax/insuranceappliance@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New Appliance Repair Request - Westchester County">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
  <div class="cf-form-group"><label for="cfName">Name *</label><input type="text" id="cfName" name="name" placeholder="John Doe" required></div>
  <div class="cf-form-group"><label for="cfEmail">Email *</label><input type="email" id="cfEmail" name="email" placeholder="john@example.com" required>
 <input type="hidden" name="_replyto" id="replyToField"></div>
@@ -1351,7 +1354,7 @@
  console.log('Form submitted (mobile:', window.innerWidth <= 768, ')');
  const email = this.email.value.trim();
 document.getElementById('replyToField').value = email;
- fetch('https://formsubmit.co/insuranceappliance@gmail.com', {method: 'POST', body: new FormData(this), headers: {'Accept': 'application/json'}})
+ fetch('https://formsubmit.co/ajax/insuranceappliance@gmail.com', {method: 'POST', body: new FormData(this), headers: {'Accept': 'application/json'}})
  .then(() => {
  console.log('Form submission successful, email:', email);
  this.reset();
