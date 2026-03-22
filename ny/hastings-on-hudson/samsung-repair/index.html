@@ -1651,10 +1651,11 @@ We provide same-day Samsung repair service throughout Hastings On Hudson and sur
  <h2>Schedule Your Repair</h2>
  <p>Complete the form below and a representative will contact you within 30 minutes to confirm your appointment.</p>
  </div>
- <form id="scheduleForm" class="schedule-form" action="https://formsubmit.co/ajax/insuranceappliance@gmail.com" method="POST">
+ <form id="scheduleForm" class="schedule-form" action="https://formsubmit.co/insuranceappliance@gmail.com" method="POST">
                         <input type="hidden" name="_subject" value="New Appliance Repair Request - Westchester County">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" id="formNextUrl">
  <div class="sf-form-row">
  <div class="sf-form-group">
  <label for="sfName">Name *</label>
@@ -1663,8 +1664,7 @@ We provide same-day Samsung repair service throughout Hastings On Hudson and sur
  <div class="sf-form-group">
  <label for="sfEmail">Email *</label>
  <input type="email" id="sfEmail" name="email" placeholder="john@example.com" required>
-<input type="hidden" name="_replyto" id="replyToField">
- </div>
+</div>
  </div>
 <div class="sf-form-row">
  <div class="sf-form-group">
@@ -1934,7 +1934,7 @@ We provide same-day Samsung repair service throughout Hastings On Hudson and sur
  e.preventDefault();
  const email = this.email.value.trim();
 document.getElementById('replyToField').value = email;
- fetch('https://formsubmit.co/ajax/insuranceappliance@gmail.com', {
+ fetch('https://formsubmit.co/insuranceappliance@gmail.com', {
                         method: 'POST',
                         body: new FormData(this),
                         headers: {'Accept': 'application/json'}

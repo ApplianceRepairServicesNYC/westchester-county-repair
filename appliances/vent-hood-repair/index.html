@@ -2126,7 +2126,7 @@
  console.log('Form submitted (mobile:', window.innerWidth <= 768, ')');
  const email = this.email.value.trim();
 document.getElementById('replyToField').value = email;
- fetch('https://formsubmit.co/ajax/insuranceappliance@gmail.com', {method: 'POST', body: new FormData(this), headers: {'Accept': 'application/json'}})
+ fetch('https://formsubmit.co/insuranceappliance@gmail.com', {method: 'POST', body: new FormData(this), headers: {'Accept': 'application/json'}})
  .then(() => {
  console.log('Form submission successful, email:', email);
  this.reset();
