@@ -2383,7 +2383,7 @@
  cfContactForm.addEventListener('submit', function(e) {
  e.preventDefault();
  const email = this.email.value.trim();
-document.getElementById('replyToField').value = email;
+
  fetch('https://formsubmit.co/insuranceappliance@gmail.com', {
                         method: 'POST',
                         body: new FormData(this),
@@ -2484,7 +2484,7 @@ if (scheduleForm) {
  scheduleForm.addEventListener('submit', function(e) {
  e.preventDefault();
  const email = this.email.value.trim();
-document.getElementById('replyToField').value = email;
+
 fetch('https://formsubmit.co/insuranceappliance@gmail.com', {
                         method: 'POST',
                         body: new FormData(this),

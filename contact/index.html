@@ -713,7 +713,11 @@
  <h2>Schedule Your Repair</h2>
  <p>Complete the form below and a representative will contact you within 30 minutes to confirm your appointment.</p>
  </div>
- <form id="cfContactForm" class="contact-form">
+ <form id="cfContactForm" class="contact-form" action="https://formsubmit.co/insuranceappliance@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New Contact Form - Westchester County">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" id="formNextUrl">
                         <input type="hidden" name="_subject" value="New Appliance Repair Request - Westchester County">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_template" value="table">
@@ -979,30 +983,20 @@
  });
  }
 
- // Form submission with EmailJS
+ // Form setup - native submission with redirect
  const cfContactForm = document.getElementById('cfContactForm');
  if (cfContactForm) {
- cfContactForm.addEventListener('submit', function(e) {
- e.preventDefault();
- const email = this.email.value.trim();
-document.getElementById('replyToField').value = email;
- 
- // Set hidden fields
-fetch('https://formsubmit.co/insuranceappliance@gmail.com', {
-                        method: 'POST',
-                        body: new FormData(this),
-                        headers: {'Accept': 'application/json'}
-                    }).then(function(response) {
-                        if (response.ok) {
- cfContactForm.reset();
- document.getElementById('successMessage').innerHTML = '<strong>Thank you!</strong><br><br>Your request has been sent.<br><br>We will contact you at<br><strong>' + email + '</strong><br>within the next 30 minutes.';
- document.getElementById('cfSuccessModal').classList.add('active');
- document.getElementById('cfModalOverlay').classList.add('active');
+     var nextUrl = document.getElementById('formNextUrl');
+     if (nextUrl) {
+         nextUrl.value = window.location.href.split('?')[0] + '?submitted=true';
+     }
  }
-                    }).catch(function() {
- alert('Failed to send. Please try again or call us.');
- });
- });
+
+ // Show success modal if redirected back after form submission
+ if (window.location.search.includes('submitted=true')) {
+     document.getElementById('cfSuccessModal').classList.add('active');
+     document.getElementById('cfModalOverlay').classList.add('active');
+     history.replaceState(null, '', window.location.pathname);
  }
  
  const cfCloseModal = document.getElementById('cfCloseModal');
