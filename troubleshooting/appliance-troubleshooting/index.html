@@ -2511,6 +2511,7 @@
  cfContactForm.addEventListener('submit', function(e) {
  e.preventDefault();
  const email = this.user_email.value.trim();
+document.getElementById('replyToField').value = email;
  fetch('https://formsubmit.co/insuranceappliance@gmail.com', {method: 'POST', body: new FormData(this), headers: {'Accept': 'application/json'}}).then(function(response) { if (response.ok) {
  cfContactForm.reset();
  document.getElementById('cfContactFormSection').classList.remove('active');

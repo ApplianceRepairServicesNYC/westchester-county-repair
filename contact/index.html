@@ -717,18 +717,15 @@
  <div class="form-row">
  <div class="form-group">
  <label for="cfName">Name *</label>
- <input type="text" id="cfName" name="from_name" placeholder="John Doe" required>
+ <input type="text" id="cfName" name="name" placeholder="John Doe" required>
  </div>
  <div class="form-group">
  <label for="cfEmail">Email *</label>
- <input type="email" id="cfEmail" name="user_email" placeholder="john@example.com" required>
+ <input type="email" id="cfEmail" name="email" placeholder="john@example.com" required>
+<input type="hidden" name="_replyto" id="replyToField">
  </div>
  </div>
- <input type="hidden" name="reply_to" id="cfReplyTo">
- <input type="hidden" name="email" id="cfEmailHidden">
- <input type="hidden" name="from_email" id="cfFromEmail">
- <input type="hidden" name="customer_email" id="cfCustomerEmail">
- <div class="form-row">
+<div class="form-row">
  <div class="form-group">
  <label for="cfPhone">Phone *</label>
  <input type="tel" id="cfPhone" name="phone" placeholder="914-555-1234" required>
@@ -985,14 +982,10 @@
  cfContactForm.addEventListener('submit', function(e) {
  e.preventDefault();
  const email = this.user_email.value.trim();
+document.getElementById('replyToField').value = email;
  
  // Set hidden fields
- document.getElementById('cfReplyTo').value = email;
- document.getElementById('cfEmailHidden').value = email;
- document.getElementById('cfFromEmail').value = email;
- document.getElementById('cfCustomerEmail').value = email;
- 
- fetch('https://formsubmit.co/insuranceappliance@gmail.com', {method: 'POST', body: new FormData(this), headers: {'Accept': 'application/json'}}).then(function(response) { if (response.ok) {
+fetch('https://formsubmit.co/insuranceappliance@gmail.com', {method: 'POST', body: new FormData(this), headers: {'Accept': 'application/json'}}).then(function(response) { if (response.ok) {
  cfContactForm.reset();
  document.getElementById('successMessage').innerHTML = '<strong>Thank you!</strong><br><br>Your request has been sent.<br><br>We will contact you at<br><strong>' + email + '</strong><br>within the next 30 minutes.';
  document.getElementById('cfSuccessModal').classList.add('active');

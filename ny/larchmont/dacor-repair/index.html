@@ -1655,18 +1655,15 @@ We provide same-day Dacor repair service throughout Larchmont and surrounding We
  <div class="sf-form-row">
  <div class="sf-form-group">
  <label for="sfName">Name *</label>
- <input type="text" id="sfName" name="from_name" placeholder="John Doe" required>
+ <input type="text" id="sfName" name="name" placeholder="John Doe" required>
  </div>
  <div class="sf-form-group">
  <label for="sfEmail">Email *</label>
- <input type="email" id="sfEmail" name="user_email" placeholder="john@example.com" required>
+ <input type="email" id="sfEmail" name="email" placeholder="john@example.com" required>
+<input type="hidden" name="_replyto" id="replyToField">
  </div>
  </div>
- <input type="hidden" name="reply_to" id="sfReplyTo">
- <input type="hidden" name="email" id="sfEmailHidden">
- <input type="hidden" name="from_email" id="sfFromEmail">
- <input type="hidden" name="customer_email" id="sfCustomerEmail">
- <div class="sf-form-row">
+<div class="sf-form-row">
  <div class="sf-form-group">
  <label for="sfPhone">Phone *</label>
  <input type="tel" id="sfPhone" name="phone" placeholder="914-555-1234" required>
@@ -1933,6 +1930,7 @@ We provide same-day Dacor repair service throughout Larchmont and surrounding We
  cfContactForm.addEventListener('submit', function(e) {
  e.preventDefault();
  const email = this.user_email.value.trim();
+document.getElementById('replyToField').value = email;
  fetch('https://formsubmit.co/insuranceappliance@gmail.com', {method: 'POST', body: new FormData(this), headers: {'Accept': 'application/json'}}).then(function(response) { if (response.ok) {
  cfContactForm.reset();
  document.getElementById('cfContactFormSection').classList.remove('active');
