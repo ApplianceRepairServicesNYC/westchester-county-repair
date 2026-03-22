@@ -1928,6 +1928,19 @@ We provide same-day LG repair service throughout Hastings On Hudson and surround
  });
  }
             
+            const scheduleFormToggle = document.getElementById('scheduleFormToggle');
+            const scheduleFormContainer = document.getElementById('scheduleFormContainer');
+            if (scheduleFormToggle && scheduleFormContainer) {
+                scheduleFormToggle.addEventListener('click', function() {
+                    scheduleFormContainer.classList.toggle('active');
+                    if (scheduleFormContainer.classList.contains('active')) {
+                        setTimeout(function() {
+                            scheduleFormContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }, 100);
+                    }
+                });
+            }
+
             const cfContactForm = document.getElementById('cfContactForm');
             if (cfContactForm) {
                 cfContactForm.addEventListener('submit', function(e) {
